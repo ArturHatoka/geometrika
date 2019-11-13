@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="src/app/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="src/css/style.min.css">
+</head>
+<body>
+<header class="header container-fluid">
+    <section class="container header__wrap">
+        <a href="#" class="header__logo">
+            <img src="src/img/logo.svg">
+        </a>
+        <nav class="header__nav">
+            <ul class="nav__list">
+                <li class="nav__point">
+                    <a href="#" class="nav__link active">Наши услуги</a>
+                </li>
+                <li class="nav__point">
+                    <a href="#" class="nav__link">Тарифы</a>
+                </li>
+                <li class="nav__point">
+                    <a href="#" class="nav__link">Тест</a>
+                </li>
+                <li class="nav__point">
+                    <a href="#" class="nav__link">Портфолио</a>
+                </li>
+                <li class="nav__point">
+                    <a href="#" class="nav__link">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header__workTime">
+            <span class="descript">
+                Пн. – Пт.:  <br> с 9:00 до 20:00
+            </span>
+        </div>
+        <div class="header__contacts">
+            <a href="#" class="h4">8 (495) 180-48-49</a>
+            <a href="#" class="descript">
+                <img src="src/img/mail.svg">
+            info@geo-metrika.ru</a>
+        </div>
+        <button class="header__callBack">
+            <img src="src/img/phone.svg">
+            <span>Обратный звонок</span>
+        </button>
+    </section>
+</header>
+<main class="main">
+    <section class="container-fluid fscreen">
+        <div class="container">
+            <div class="col-7 px-0 d-flex flex-column justify-content-between">
+               <h1 class="h1 fscreen__title">
+                   Разработаем индивидуальный дизайн-проект «под ключ» за 1,5 месяца 
+               </h1>
+               <div class="test fscreen__offer">
+                    <span class="fscreen__offer-subtitle subtitle">от <b>690</b> рублей/кв.м</span>
+                    <button class="fscreen__offer-button button button-yellow">Заказать</button>
+                    <span class="fscreen__offer-desc descript">Нажимая данную кнопку вы соглашаетесь <a href="#">с политикой конфиденциальности</a></span>
+               </div>
+            </div>
+            <div class="col-5 d-flex align-items-center justify-content-end">
+               <div class="fscreen__play">
+                    <div class="fscreen__play-box">
+                        <button class="fscreen__play-item">
+                            <img src="src/img/play.svg" alt="">
+                        </button>
+                    </div>
+                   <span class="h3 text-white text-center">Дизайн проект барбершопа за 690 000 рублей</span>
+               </div>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid quest">
+        <div class="container quest__wrap">
+            <h2 class="h2 quest__title">
+                Ответь на 10 простых вопросов и узнай стоимость дизйн-проекта
+            </h2>
+            <i class="splash"></i>
+            <span class="h4 quest__subtitle">в конце приятный бонус</span>
+            <button class="button button-yellow quest__button">Пройти тест</button>
+        </div>
+    </section>
+    <section class="container-fluid">
+
+    </section>
+    <section class="container-fluid">
+
+    </section>
+</main>
+<footer class="footer">
+
+</footer>
+</body>
+<script src="src/scripts/jquery-3.4.1.min.js"></script>
+<script src="src/app/bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+         var $fScreenHeight = $('.fscreen').outerHeight();
+         $('.fscreen').find('.container').outerHeight($fScreenHeight);
+    });
+</script>
+<script src="src/scripts/scripts.js"></script>
+</html>

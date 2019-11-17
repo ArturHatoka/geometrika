@@ -26,6 +26,16 @@
 				}
 			}
 		}
+		&.third{
+			& .quest{
+				&__wrap{
+					padding-top: 100px;
+				}
+				&__title{
+					max-width: 580px;
+				}
+			}
+		}
 	}
 	.container-fluid.stages{
 		& .tabulation .tabulation{
@@ -51,6 +61,13 @@
    			right: -80px;
 		}
 	}
+	.buble {
+		right: 3%;
+	}
+	.footer {
+		padding-top: 50px;
+		padding-bottom: 40px;
+	}
 
 }
 
@@ -62,9 +79,69 @@
 	body{
 		font-size: 14px;
 	}
+	.h1 {
+    	font-size: 56px;
+	}
+	.h2{
+		font-size: 41px
+	}
+	.h3{
+		font-size: 26px;
+	}
+	.h4{
+
+	}
 	.header{
 		&__contacts{
 			display: none;
+		}
+	}
+	.quest{
+		&__wrap{
+			padding-top: 0;
+		}
+		&.second{
+    		margin-top: 300px;
+		}
+	}
+	.advantage{
+		& .tabulation{
+			&__tab{
+				text-align: right;
+			}
+		}
+	}
+	.container-fluid.stages .tabulation .tabulation__tab {
+		padding-bottom: 20px;
+	}
+	.about{
+		&__play{
+			width: 50%;
+		}
+		&__subtitle{
+			max-width: 50%;
+		}
+	}
+	.packs{
+		&__boxs{
+			left: 35%;
+			width: 65%;
+		}
+		&__box{
+			margin: 0 1px;
+		}
+		&__table {
+    		margin-left: -25px;
+    		margin-right: -25px;
+		}
+	}
+	.gift{
+		&:before{
+    		right: -190px;
+		}
+		&:after{
+   			right: -25%;
+   			transform: translate(25px, -285px) rotate(10deg);
 		}
 	}
 }
@@ -75,10 +152,14 @@
 			display: flex;
 		}
 	}
-
+	
 	body{
 		font-size: 12px;
 	}
+}
+
+@media screen and (max-width: 919px) {
+
 }
 
 @media screen and (max-width: 767px) {

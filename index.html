@@ -7,32 +7,39 @@
     <title>Title</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="src/app/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="src/app/lightbox/ekko-lightbox.css">
+    <link rel="stylesheet" type="text/css" href="src/app/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="src/css/style.min.css">
+    <link rel="stylesheet" type="text/css" href="src/css/media.min.css">
 </head>
 <body>
+
+<!-- Header -->
 <header class="header container-fluid">
     <section class="container header__wrap">
         <a href="#" class="header__logo">
             <img src="src/img/logo.svg">
         </a>
-        <nav class="header__nav">
-            <ul class="nav__list">
-                <li class="nav__point">
-                    <a href="#" class="nav__link active">Наши услуги</a>
-                </li>
-                <li class="nav__point">
-                    <a href="#" class="nav__link">Тарифы</a>
-                </li>
-                <li class="nav__point">
-                    <a href="#" class="nav__link">Тест</a>
-                </li>
-                <li class="nav__point">
-                    <a href="#" class="nav__link">Портфолио</a>
-                </li>
-                <li class="nav__point">
-                    <a href="#" class="nav__link">Контакты</a>
-                </li>
-            </ul>
+        <nav class="header__nav navbar-expand-xl">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="nav__list">
+                    <li class="nav__point">
+                        <a href="#about" class="nav__link active">Наши услуги</a>
+                    </li>
+                    <li class="nav__point">
+                        <a href="#tarifs" class="nav__link">Тарифы</a>
+                    </li>
+                    <li class="nav__point">
+                        <a href="#test" class="nav__link">Тест</a>
+                    </li>
+                    <li class="nav__point">
+                        <a href="#portfolio" class="nav__link">Портфолио</a>
+                    </li>
+                    <li class="nav__point">
+                        <a href="#contacts" class="nav__link">Контакты</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
         <div class="header__workTime">
             <span class="descript">
@@ -45,13 +52,19 @@
                 <img src="src/img/mail.svg">
             info@geo-metrika.ru</a>
         </div>
-        <button class="header__callBack">
+        <button class="header__callBack" data-toggle="modal" data-target="#modal">
             <img src="src/img/phone.svg">
             <span>Обратный звонок</span>
         </button>
+        <button class="nav__button" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
     </section>
 </header>
+<!-- /Header -->
+
 <main class="main">
+    <!-- First screen -->
     <section class="container-fluid fscreen">
         <div class="container">
             <div class="col-7 px-0 d-flex flex-column justify-content-between">
@@ -66,8 +79,8 @@
             </div>
             <div class="col-5 d-flex align-items-center justify-content-end">
                <div class="fscreen__play">
-                    <div class="fscreen__play-box">
-                        <button class="fscreen__play-item">
+                    <div class="play__box">
+                        <button class="play__item" data-toggle="modal" data-target="#modal">
                             <img src="src/img/play.svg" alt="">
                         </button>
                     </div>
@@ -76,6 +89,9 @@
             </div>
         </div>
     </section>
+    <!-- /First screen -->
+
+    <!-- Quiz -->
     <section class="container-fluid quest">
         <div class="container quest__wrap">
             <h2 class="h2 quest__title">
@@ -86,23 +102,1311 @@
             <button class="button button-yellow quest__button">Пройти тест</button>
         </div>
     </section>
-    <section class="container-fluid">
+    <!-- /Quiz -->
 
+    <!-- Advantages -->
+    <section class="container-fluid advantage">
+        <div class="container advantage__wrap">
+            <h2 class="h2">
+                Ваша выгода от работы с нами
+            </h2>
+            <i class="splash"></i>
+            <div class="tabulation">
+                <div class="col-4">
+                  <div class="list-group tabulation__tabs" id="list-advantage" role="tablist">
+                      <a class="tabulation__tab h3 active" id="advantage-list-1-list" data-toggle="list" href="#advantage-list-1" role="tab"
+                      aria-controls="advantage1">Гарантия результата</a>
+                      <a class="tabulation__tab h3" id="advantage-list-2-list" data-toggle="list" href="#advantage-list-2" role="tab" aria-controls="advantage2">Быстро</a>
+                      <a class="tabulation__tab h3" id="advantage-list-3-list" data-toggle="list" href="#advantage-list-3" role="tab" aria-controls="advantage3">Экономично</a>
+                      <a class="tabulation__tab h3" id="advantage-list-4-list" data-toggle="list" href="#advantage-list-4" role="tab" aria-controls="advantage4">Комплексно</a>
+                      <a class="tabulation__tab h3" id="advantage-list-5-list" data-toggle="list" href="#advantage-list-5" role="tab" aria-controls="advantage5">Удобно и без нервов</a>
+                  </div>
+                </div>
+                <div class="col-8">
+                  <div class="tab-content tabulation__content" id="nav-advantageContent">
+                      <div class="tab-pane tabulation__pane fade show active" id="advantage-list-1" role="tabpanel" aria-labelledby="advantage-list-1-list">
+                        <div class="pane__content">
+                            <h3 class="h3">Гарантия результата</h3>
+                            <span>
+                                Возвращаем всю сумму предоплаты в случае отказа в согласовании перепланировки. Гарантию фиксируем договором.
+                            </span>
+                            <img class="pane__img" src="src/img/safe.svg" alt="">
+                        </div>
+                      </div>
+                      <div class="tab-pane tabulation__pane fade" id="advantage-list-2" role="tabpanel" aria-labelledby="advantage-list-2-list">
+                        <div class="pane__content">
+                            <h3 class="h3">Гарантия результата</h3>
+                            <span>
+                                Возвращаем всю сумму предоплаты в случае отказа в согласовании перепланировки. Гарантию фиксируем договором.
+                            </span>
+                            <img class="pane__img" src="src/img/speed.svg" alt="">
+                        </div>
+                      </div>
+                      <div class="tab-pane tabulation__pane fade" id="advantage-list-3" role="tabpanel" aria-labelledby="advantage-list-3-list">
+                        <div class="pane__content">
+                            <h3 class="h3">Гарантия результата</h3>
+                            <span>
+                                Возвращаем всю сумму предоплаты в случае отказа в согласовании перепланировки. Гарантию фиксируем договором.
+                            </span>
+                            <img class="pane__img" src="src/img/portfolio.svg" alt="">
+                        </div>
+                      </div>
+                      <div class="tab-pane tabulation__pane fade" id="advantage-list-4" role="tabpanel" aria-labelledby="advantage-list-4-list">
+                        <div class="pane__content">
+                            <h3 class="h3">Гарантия результата</h3>
+                            <span>
+                                Возвращаем всю сумму предоплаты в случае отказа в согласовании перепланировки. Гарантию фиксируем договором.
+                            </span>
+                            <img class="pane__img" src="src/img/coin.svg" alt="">
+                        </div>
+                      </div>
+                      <div class="tab-pane tabulation__pane fade" id="advantage-list-5" role="tabpanel" aria-labelledby="advantage-list-5-list">
+                        <div class="pane__content">
+                            <h3 class="h3">Гарантия результата</h3>
+                            <span>
+                                Возвращаем всю сумму предоплаты в случае отказа в согласовании перепланировки. Гарантию фиксируем договором.
+                            </span>
+                            <img class="pane__img" src="src/img/island.svg" alt="">
+                        </div>
+                      </div>
+                  </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <section class="container-fluid">
+    <!-- /Advantages -->
+   
+    <!-- Work stages -->
+    <section class="container-fluid stages">
+        <div class="container stages__wrap">
+            <h2 class="h2">
+               Этапы работы
+            </h2>
+            <i class="splash"></i>
+            <div class="tabulation flex-row-reverse">
+                <div class="col-4 pt-4">
+                  <div class="list-group tabulation__tabs" id="list-stages" role="tablist">
+                      <a class="tabulation__tab h3 active" id="stages-list-1-list" data-toggle="list" href="#stages-list-1" role="tab"
+                      aria-controls="advantage1"><span class="num"></span>Составление договора</a>
+                      <a class="tabulation__tab h3" id="stages-list-2-list" data-toggle="list" href="#stages-list-2" role="tab" aria-controls="advantage2"><span class="num"></span>Эскизное прототипирование</a>
+                      <a class="tabulation__tab h3" id="stages-list-3-list" data-toggle="list" href="#stages-list-3" role="tab" aria-controls="advantage3"><span class="num"></span>Прототипирование</a>
+                      <a class="tabulation__tab h3" id="stages-list-4-list" data-toggle="list" href="#stages-list-4" role="tab" aria-controls="advantage4"><span class="num"></span>Согласование</a>
+                      <a class="tabulation__tab h3" id="stages-list-5-list" data-toggle="list" href="#stages-list-5" role="tab" aria-controls="advantage5"><span class="num"></span>Выезд на объект</a>
+                  </div>
+                </div>
+                <div class="col-8">
+                  <div class="tab-content tabulation__content" id="nav-stagesContent">
+                        <div class="tab-pane tabulation__pane fade show active" id="stages-list-1" role="tabpanel" aria-labelledby="stages-list-1-list">
+                            <div class="pane__content">
+                                <h3 class="h3"><span class="num"></span>Составление договора</h3>
+                                <div class="text">
+                                    <p>
+                                        Возвращаем всю сумму предоплаты в случае отказа в       согласовании перепланировки. <br> Гарантию    фиксируем    договором.
+                                    </p>
+                                </div>
+                                <img class="pane__img" src="src/img/stages_img.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="tab-pane tabulation__pane fade" id="stages-list-2" role=" tabpanel" aria-labelledby="stages-list-2-list">
+                            <div class="pane__content">
+                                <h3 class="h3"><span class="num"></span>Эскизное прототипирование</h3>
+                                <div class="text">
+                                    <p>
+                                        Возвращаем всю сумму предоплаты в случае отказа в       согласовании перепланировки. <br> Гарантию    фиксируем    договором.
+                                    </p>
+                                </div>
+                                <img class="pane__img" src="src/img/stages_img.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="tab-pane tabulation__pane fade" id="stages-list-3" role="tabpanel" aria-labelledby="stages-list-3-list">
+                            <div class="pane__content">
+                                <h3 class="h3"><span class="num"></span>Прототипирование</h3>
+                                <div class="text">
+                                    <p>
+                                        Возвращаем всю сумму предоплаты в случае отказа в       согласовании перепланировки. <br> Гарантию    фиксируем    договором.
+                                    </p>
+                                </div>
+                                <img class="pane__img" src="src/img/stages_img.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="tab-pane tabulation__pane fade" id="stages-list-4" role="tabpanel" aria-labelledby="stages-list-4-list">
+                            <div class="pane__content">
+                                <h3 class="h3"><span class="num"></span>Согласование</h3>
+                                <div class="text">
+                                    <p>
+                                        Возвращаем всю сумму предоплаты в случае отказа в       согласовании перепланировки. <br> Гарантию    фиксируем    договором.
+                                    </p>
+                                </div>
+                                <img class="pane__img" src="src/img/stages_img.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="tab-pane tabulation__pane fade" id="stages-list-5" role="tabpanel" aria-labelledby="stages-list-5-list">   
+                            <div class="pane__content">
+                                <h3 class="h3"><span class="num"></span>Выезд на объект</h3>
+                                <div class="text">
+                                    <p>
+                                        Возвращаем всю сумму предоплаты в случае отказа в       согласовании перепланировки. <br> Гарантию    фиксируем    договором.
+                                    </p>
+                                </div>
+                                <img class="pane__img" src="src/img/stages_img.jpg" alt="">
+                            </div>
+                        </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Work stages -->
 
+    <!-- About company -->
+    <section class="container-fluid about" id="about">
+        <div class="container about__wrap">
+            <h2 class="h2 about__title">
+                О нас
+            </h2>
+            <i class="splash"></i>
+            <span class="about__subtitle">
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic..
+            </span>
+            <div class="about__play">
+                <div class="play__box">
+                    <button class="play__item">
+                        <img src="src/img/play.svg" alt="">
+                    </button>
+                </div>
+                <span class="h3 text-white text-center">Посмотреть <br> видео-репортаж</span>
+            </div>
+            <div class="about__statistic">
+                <div class="statistic__box">
+                    <span class="h4">На рынке</span>
+                    <img src="src/img/3,5.svg" alt="" class="statistic__item">
+                    <span class="h4">года</span>
+                </div>
+                <div class="statistic__box">
+                    <span class="h4">Реализовано</span>
+                    <img src="src/img/75.svg" alt="" class="statistic__item">
+                    <span class="h4">проектов</span>
+                </div>
+                <div class="statistic__box">
+                    <span class="h4">Спроектировано</span>
+                    <img src="src/img/5785.svg" alt="" class="statistic__item">
+                    <span class="h4">кв.м</span>
+                </div>
+            </div>
+        </div>
     </section>
+    <!-- /About company -->
+
+    <!-- Services packs -->
+    <section class="container-fluid packs" id="tarifs">
+        <div class="container packs__wrap">
+            <h2 class="h2">
+               Заказывайте услугу в комплексе, получайте скидку
+            </h2>
+            <i class="splash"></i>
+            <span class="packs__desc">
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic..
+            </span>
+            <div class="packs__table">
+                <div class="packs__table-row">
+                    <span class="packs__table-col">
+                        Аудит помещения на возможность перепланировки
+                    </span>
+                </div>
+                <div class="packs__table-row">
+                    <span class="packs__table-col">
+                        Выезд замерщика на объект
+                    </span>
+                </div>
+                <div class="packs__table-row">
+                    <span class="packs__table-col">
+                        Подготовка проекта перепланировки помещения
+                    </span>
+                </div>
+                <div class="packs__table-row">
+                    <span class="packs__table-col">
+                        Теплотехнический расчет
+                    </span>
+                </div>
+                <div class="packs__table-row">
+                    <span class="packs__table-col">
+                        Подготовка технического заключения
+                    </span>
+                </div>
+                <div class="packs__table-row">
+                    <span class="packs__table-col">
+                        Получение разрешения на перепланировку
+                    </span>
+                </div>
+                <div class="packs__table-row">
+                    <span class="packs__table-col">
+                        Авторский надзор за производством скрытых работ
+                    </span>
+                </div>
+                <div class="packs__table-row">
+                    <span class="packs__table-col">
+                        Подготовка актов скрытых работ
+                    </span>
+                </div>
+                <div class="packs__table-row">
+                    <span class="packs__table-col">
+                        Получение акта о завершении перепланировки
+                    </span>
+                </div>
+                <div class="packs__table-row">
+                    <span class="packs__table-col">
+                        Подготовка технического плана после перепланировки 
+                    </span>
+                </div>
+                <div class="packs__table-row">
+                    <span class="packs__table-col">
+                        Получение выписки из Росреестра
+                    </span>
+                </div>
+                <div class="packs__table-row">
+                    <span class="packs__table-col">
+                        Стоимость актуальна для квартир до 50 м<sup>2</sup>
+                    </span>
+                </div>
+                <div class="packs__table-row">
+                    <span class="packs__table-col">
+                        Отдельно оплачивается гос. Пошлина 3 000 рублей
+                    </span>
+                </div>
+                <div class="packs__table-row packs__table-end">
+                    <span class="packs__table-col h4">
+                        <i>Cкидка 10 %</i> при полной предоплате 
+                    </span>
+                </div>
+                <div class="packs__boxs">
+                    <div class="packs__box first">
+                        <div class="packs__box-head">
+                            <span class="h4 mb-0">START</span>
+                        </div>
+                        <div class="packs__box-row check"></div>
+                        <div class="packs__box-row check"></div>
+                        <div class="packs__box-row check"></div>
+                        <div class="packs__box-row"></div>
+                        <div class="packs__box-row"></div>
+                        <div class="packs__box-row"></div>
+                        <div class="packs__box-row"></div>
+                        <div class="packs__box-row"></div>
+                        <div class="packs__box-row"></div>
+                        <div class="packs__box-row"></div>
+                        <div class="packs__box-row"></div>
+                        <div class="packs__box-row"></div>
+                        <div class="packs__box-row"></div>
+                        <div class="packs__box-row packs__box-offer">
+                            <button class="packs__box-button button button-green" data-toggle="modal" data-target="#modal">
+                                Хочу скидку
+                            </button>
+                            <span class="h3">29 990 ₽</span>
+                        </div>
+                        <button class="packs__box-footer button" data-toggle="modal" data-target="#modal">
+                            Заказать
+                        </button>
+                    </div>
+                    <div class="packs__box second">
+                        <div class="packs__box-head">
+                            <span class="h4 mb-0">LUX</span>
+                        </div>
+                        <div class="packs__box-row check"></div>
+                        <div class="packs__box-row check"></div>
+                        <div class="packs__box-row check"></div>
+                        <div class="packs__box-row check"></div>
+                        <div class="packs__box-row check"></div>
+                        <div class="packs__box-row check"></div>
+                        <div class="packs__box-row"></div>
+                        <div class="packs__box-row"></div>
+                        <div class="packs__box-row"></div>
+                        <div class="packs__box-row"></div>
+                        <div class="packs__box-row"></div>
+                        <div class="packs__box-row"></div>
+                        <div class="packs__box-row"></div>
+                        <div class="packs__box-row packs__box-offer">
+                            <button class="packs__box-button button button-green" data-toggle="modal" data-target="#modal">
+                                Хочу скидку
+                            </button>
+                            <span class="h3">49 990 ₽</span>
+                        </div>
+                        <button class="packs__box-footer button" data-toggle="modal" data-target="#modal">
+                            Заказать
+                        </button>
+                    </div>
+                    <div class="packs__box third">
+                        <div class="packs__box-head">
+                            <span class="h4 mb-0">FULL</span>
+                        </div>
+                        <div class="packs__box-row check"></div>
+                        <div class="packs__box-row check"></div>
+                        <div class="packs__box-row check"></div>
+                        <div class="packs__box-row check"></div>
+                        <div class="packs__box-row check"></div>
+                        <div class="packs__box-row check"></div>
+                        <div class="packs__box-row check"></div>
+                        <div class="packs__box-row check"></div>
+                        <div class="packs__box-row check"></div>
+                        <div class="packs__box-row check"></div>
+                        <div class="packs__box-row check"></div>
+                        <div class="packs__box-row check"></div>
+                        <div class="packs__box-row check"></div>
+                        <div class="packs__box-row packs__box-offer">
+                            <button class="packs__box-button button button-green" data-toggle="modal" data-target="#modal">
+                                Хочу скидку
+                            </button>
+                            <span class="h3">64 990 ₽</span>
+                        </div>
+                        <button class="packs__box-footer button" data-toggle="modal" data-target="#modal">
+                            Заказать
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Services packs -->
+
+    <!-- Download portfolio pdf -->
+    <section class="container-fluid quest second">
+        <div class="container quest__wrap">
+            <h2 class="h2 quest__title">
+                Хотите узнать, из чего будет состоять ваш дизайн проект
+            </h2>
+            <i class="splash"></i>
+            <span class="h4 quest__subtitle">Оставьте свои контактные данные и получите ссылку на скачивания документа!</span>
+            <a href="" class="button button-yellow quest__button">Скачать pdf</a>
+        </div>
+    </section>
+    <!-- /Download portfolio pdf -->
+
+    <!-- Gift sale -->
+    <section class="container-fluid gift" id="test">
+        <div class="container gift__wrap">
+            <div class="gift__content">
+                <h4 class="h4">При заказе дизайн проекта</h4>
+                <h2 class="h2">
+                    Дарим скидку на согласование перепланировки
+                </h2>
+                <i class="splash"></i>
+                <div class="gift__price">
+                    <h4 class="h4 gift__price-delete">29 990 рублей</h4>
+                    <h2 class="h2">21 000 рублей</h2>
+                </div>
+                <button class="gift__price-button button button-yellow" data-toggle="modal" data-target="#modal">Заказать</button>
+            </div>
+            <div class="gift__sale">
+                <span class="gift__sale-txt h1">SALE</span>
+                <span class="gift__sale-num">-30%</span>
+            </div>
+        </div>
+    </section>
+    <!-- /Gift sale -->
+
+    <!-- Portfolio -->
+    <section class="container-fluid portfolio" id="portfolio">
+        <div class="conatiner portfolio__wrap">
+            <h2 class="h2">
+                Портфолио
+            </h2>
+            <i class="splash"></i>
+            <div class="tabulation">
+                <div class="col-2 pr-0">
+                  <div class="list-group tabulation__tabs" id="list-portfolio" role="tablist">
+                      <a class="tabulation__tab h3 active" id="portfolio-list-1-list" data-toggle="list" href="#portfolio-list-1" role="tab"
+                      aria-controls="portfolio1">Все работы</a>
+                      <a class="tabulation__tab h3" id="portfolio-list-2-list" data-toggle="list" href="#portfolio-list-2" role="tab" aria-controls="portfolio2">Лофт</a>
+                      <a class="tabulation__tab h3" id="portfolio-list-3-list" data-toggle="list" href="#portfolio-list-3" role="tab" aria-controls="portfolio3">Сканди</a>
+                      <a class="tabulation__tab h3" id="portfolio-list-4-list" data-toggle="list" href="#portfolio-list-4" role="tab" aria-controls="portfolio4">Классика</a>
+                      <a class="tabulation__tab h3" id="portfolio-list-5-list" data-toggle="list" href="#portfolio-list-5" role="tab" aria-controls="portfolio5">Эклектика</a>
+                  </div>
+                </div>
+                <div class="col-10 pl-4">
+                  <div class="tab-content tabulation__content" id="nav-portfolioContent">
+                      <div class="tab-pane tabulation__pane fade show active" id="portfolio-list-1" role="tabpanel" aria-labelledby="portfolio-list-1-list">
+                        <div class="pane__content">
+                            <div class="portfolio__slider slider pf_slider1">
+                                <div class="portfolio__slide">
+                                    <div class="portfolio__slide-box">
+                                        <img src="src/img/pf_img1.jpg" alt="">
+                                        <div class="slide__box">
+                                            <div class="slide__tags">
+                                                <span class="slide__tag">#лофт</span>
+                                                <span class="slide__tag">#3комнаты</span>
+                                            </div>
+                                            <span class="slide__city">
+                                                г. Москва
+                                            </span>
+                                            <span class="slide__name h3">
+                                                2х комнатная квартира, 65 кв.м
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <span class="portfolio__slide-desc">
+                                        Lorem Ipsum has been the industry's standard dummy text ever since the  1500s, when an unknown printer took a galley of type and scrambled it to     make a type specimen book. It has survived not only five centuries, but     also the leap into electronic...
+                                    </span>
+                                    <button class="button button-green">Подробнее</button>
+                                </div>
+                                <div class="portfolio__slide">
+                                    <div class="portfolio__slide-box">
+                                        <img src="src/img/pf_img1.jpg" alt="">
+                                        <div class="slide__box">
+                                            <div class="slide__tags">
+                                                <span class="slide__tag">#лофт</span>
+                                                <span class="slide__tag">#3комнаты</span>
+                                            </div>
+                                            <span class="slide__city">
+                                                г. Москва
+                                            </span>
+                                            <span class="slide__name h3">
+                                                2х комнатная квартира, 65 кв.м
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <span class="portfolio__slide-desc">
+                                        Lorem Ipsum has been the industry's standard dummy text ever since the  1500s, when an unknown printer took a galley of type and scrambled it to     make a type specimen book. It has survived not only five centuries, but     also the leap into electronic...
+                                    </span>
+                                    <button class="button button-green">Подробнее</button>
+                                </div>
+                                <div class="portfolio__slide">
+                                    <div class="portfolio__slide-box">
+                                        <img src="src/img/pf_img1.jpg" alt="">
+                                        <div class="slide__box">
+                                            <div class="slide__tags">
+                                                <span class="slide__tag">#лофт</span>
+                                                <span class="slide__tag">#3комнаты</span>
+                                            </div>
+                                            <span class="slide__city">
+                                                г. Москва
+                                            </span>
+                                            <span class="slide__name h3">
+                                                2х комнатная квартира, 65 кв.м
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <span class="portfolio__slide-desc">
+                                        Lorem Ipsum has been the industry's standard dummy text ever since the  1500s, when an unknown printer took a galley of type and scrambled it to     make a type specimen book. It has survived not only five centuries, but     also the leap into electronic...
+                                    </span>
+                                    <button class="button button-green">Подробнее</button>
+                                </div>
+                                <div class="portfolio__slide">
+                                    <div class="portfolio__slide-box">
+                                        <img src="src/img/pf_img1.jpg" alt="">
+                                        <div class="slide__box">
+                                            <div class="slide__tags">
+                                                <span class="slide__tag">#лофт</span>
+                                                <span class="slide__tag">#3комнаты</span>
+                                            </div>
+                                            <span class="slide__city">
+                                                г. Москва
+                                            </span>
+                                            <span class="slide__name h3">
+                                                2х комнатная квартира, 65 кв.м
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <span class="portfolio__slide-desc">
+                                        Lorem Ipsum has been the industry's standard dummy text ever since the  1500s, when an unknown printer took a galley of type and scrambled it to     make a type specimen book. It has survived not only five centuries, but     also the leap into electronic...
+                                    </span>
+                                    <button class="button button-green">Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane tabulation__pane fade" id="portfolio-list-2" role="tabpanel" aria-labelledby="portfolio-list-2-list">
+                        <div class="pane__content">
+                            <div class="portfolio__slider slider pf_slider2">
+                                <div class="portfolio__slide">
+                                    <div class="portfolio__slide-box">
+                                        <img src="src/img/pf_img1.jpg" alt="">
+                                        <div class="slide__box">
+                                            <div class="slide__tags">
+                                                <span class="slide__tag">#лофт</span>
+                                                <span class="slide__tag">#3комнаты</span>
+                                            </div>
+                                            <span class="slide__city">
+                                                г. Москва
+                                            </span>
+                                            <span class="slide__name h3">
+                                                2х комнатная квартира, 65 кв.м
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <span class="portfolio__slide-desc">
+                                        Lorem Ipsum has been the industry's standard dummy text ever since the  1500s, when an unknown printer took a galley of type and scrambled it to     make a type specimen book. It has survived not only five centuries, but     also the leap into electronic...
+                                    </span>
+                                    <button class="button button-green">Подробнее</button>
+                                </div>
+                                <div class="portfolio__slide">
+                                    <div class="portfolio__slide-box">
+                                        <img src="src/img/pf_img1.jpg" alt="">
+                                        <div class="slide__box">
+                                            <div class="slide__tags">
+                                                <span class="slide__tag">#лофт</span>
+                                                <span class="slide__tag">#3комнаты</span>
+                                            </div>
+                                            <span class="slide__city">
+                                                г. Москва
+                                            </span>
+                                            <span class="slide__name h3">
+                                                2х комнатная квартира, 65 кв.м
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <span class="portfolio__slide-desc">
+                                        Lorem Ipsum has been the industry's standard dummy text ever since the  1500s, when an unknown printer took a galley of type and scrambled it to     make a type specimen book. It has survived not only five centuries, but     also the leap into electronic...
+                                    </span>
+                                    <button class="button button-green">Подробнее</button>
+                                </div>
+                                <div class="portfolio__slide">
+                                    <div class="portfolio__slide-box">
+                                        <img src="src/img/pf_img1.jpg" alt="">
+                                        <div class="slide__box">
+                                            <div class="slide__tags">
+                                                <span class="slide__tag">#лофт</span>
+                                                <span class="slide__tag">#3комнаты</span>
+                                            </div>
+                                            <span class="slide__city">
+                                                г. Москва
+                                            </span>
+                                            <span class="slide__name h3">
+                                                2х комнатная квартира, 65 кв.м
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <span class="portfolio__slide-desc">
+                                        Lorem Ipsum has been the industry's standard dummy text ever since the  1500s, when an unknown printer took a galley of type and scrambled it to     make a type specimen book. It has survived not only five centuries, but     also the leap into electronic...
+                                    </span>
+                                    <button class="button button-green">Подробнее</button>
+                                </div>
+                                <div class="portfolio__slide">
+                                    <div class="portfolio__slide-box">
+                                        <img src="src/img/pf_img1.jpg" alt="">
+                                        <div class="slide__box">
+                                            <div class="slide__tags">
+                                                <span class="slide__tag">#лофт</span>
+                                                <span class="slide__tag">#3комнаты</span>
+                                            </div>
+                                            <span class="slide__city">
+                                                г. Москва
+                                            </span>
+                                            <span class="slide__name h3">
+                                                2х комнатная квартира, 65 кв.м
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <span class="portfolio__slide-desc">
+                                        Lorem Ipsum has been the industry's standard dummy text ever since the  1500s, when an unknown printer took a galley of type and scrambled it to     make a type specimen book. It has survived not only five centuries, but     also the leap into electronic...
+                                    </span>
+                                    <button class="button button-green">Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane tabulation__pane fade" id="portfolio-list-3" role="tabpanel" aria-labelledby="portfolio-list-3-list">
+                        <div class="pane__content">
+                           <div class="portfolio__slider slider pf_slider3">
+                                <div class="portfolio__slide">
+                                    <div class="portfolio__slide-box">
+                                        <img src="src/img/pf_img1.jpg" alt="">
+                                        <div class="slide__box">
+                                            <div class="slide__tags">
+                                                <span class="slide__tag">#лофт</span>
+                                                <span class="slide__tag">#3комнаты</span>
+                                            </div>
+                                            <span class="slide__city">
+                                                г. Москва
+                                            </span>
+                                            <span class="slide__name h3">
+                                                2х комнатная квартира, 65 кв.м
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <span class="portfolio__slide-desc">
+                                        Lorem Ipsum has been the industry's standard dummy text ever since the  1500s, when an unknown printer took a galley of type and scrambled it to     make a type specimen book. It has survived not only five centuries, but     also the leap into electronic...
+                                    </span>
+                                    <button class="button button-green">Подробнее</button>
+                                </div>
+                                <div class="portfolio__slide">
+                                    <div class="portfolio__slide-box">
+                                        <img src="src/img/pf_img1.jpg" alt="">
+                                        <div class="slide__box">
+                                            <div class="slide__tags">
+                                                <span class="slide__tag">#лофт</span>
+                                                <span class="slide__tag">#3комнаты</span>
+                                            </div>
+                                            <span class="slide__city">
+                                                г. Москва
+                                            </span>
+                                            <span class="slide__name h3">
+                                                2х комнатная квартира, 65 кв.м
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <span class="portfolio__slide-desc">
+                                        Lorem Ipsum has been the industry's standard dummy text ever since the  1500s, when an unknown printer took a galley of type and scrambled it to     make a type specimen book. It has survived not only five centuries, but     also the leap into electronic...
+                                    </span>
+                                    <button class="button button-green">Подробнее</button>
+                                </div>
+                                <div class="portfolio__slide">
+                                    <div class="portfolio__slide-box">
+                                        <img src="src/img/pf_img1.jpg" alt="">
+                                        <div class="slide__box">
+                                            <div class="slide__tags">
+                                                <span class="slide__tag">#лофт</span>
+                                                <span class="slide__tag">#3комнаты</span>
+                                            </div>
+                                            <span class="slide__city">
+                                                г. Москва
+                                            </span>
+                                            <span class="slide__name h3">
+                                                2х комнатная квартира, 65 кв.м
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <span class="portfolio__slide-desc">
+                                        Lorem Ipsum has been the industry's standard dummy text ever since the  1500s, when an unknown printer took a galley of type and scrambled it to     make a type specimen book. It has survived not only five centuries, but     also the leap into electronic...
+                                    </span>
+                                    <button class="button button-green">Подробнее</button>
+                                </div>
+                                <div class="portfolio__slide">
+                                    <div class="portfolio__slide-box">
+                                        <img src="src/img/pf_img1.jpg" alt="">
+                                        <div class="slide__box">
+                                            <div class="slide__tags">
+                                                <span class="slide__tag">#лофт</span>
+                                                <span class="slide__tag">#3комнаты</span>
+                                            </div>
+                                            <span class="slide__city">
+                                                г. Москва
+                                            </span>
+                                            <span class="slide__name h3">
+                                                2х комнатная квартира, 65 кв.м
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <span class="portfolio__slide-desc">
+                                        Lorem Ipsum has been the industry's standard dummy text ever since the  1500s, when an unknown printer took a galley of type and scrambled it to     make a type specimen book. It has survived not only five centuries, but     also the leap into electronic...
+                                    </span>
+                                    <button class="button button-green">Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane tabulation__pane fade" id="portfolio-list-4" role="tabpanel" aria-labelledby="portfolio-list-4-list">
+                        <div class="pane__content">
+                           <div class="portfolio__slider slider pf_slider4">
+                                <div class="portfolio__slide">
+                                    <div class="portfolio__slide-box">
+                                        <img src="src/img/pf_img1.jpg" alt="">
+                                        <div class="slide__box">
+                                            <div class="slide__tags">
+                                                <span class="slide__tag">#лофт</span>
+                                                <span class="slide__tag">#3комнаты</span>
+                                            </div>
+                                            <span class="slide__city">
+                                                г. Москва
+                                            </span>
+                                            <span class="slide__name h3">
+                                                2х комнатная квартира, 65 кв.м
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <span class="portfolio__slide-desc">
+                                        Lorem Ipsum has been the industry's standard dummy text ever since the  1500s, when an unknown printer took a galley of type and scrambled it to     make a type specimen book. It has survived not only five centuries, but     also the leap into electronic...
+                                    </span>
+                                    <button class="button button-green">Подробнее</button>
+                                </div>
+                                <div class="portfolio__slide">
+                                    <div class="portfolio__slide-box">
+                                        <img src="src/img/pf_img1.jpg" alt="">
+                                        <div class="slide__box">
+                                            <div class="slide__tags">
+                                                <span class="slide__tag">#лофт</span>
+                                                <span class="slide__tag">#3комнаты</span>
+                                            </div>
+                                            <span class="slide__city">
+                                                г. Москва
+                                            </span>
+                                            <span class="slide__name h3">
+                                                2х комнатная квартира, 65 кв.м
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <span class="portfolio__slide-desc">
+                                        Lorem Ipsum has been the industry's standard dummy text ever since the  1500s, when an unknown printer took a galley of type and scrambled it to     make a type specimen book. It has survived not only five centuries, but     also the leap into electronic...
+                                    </span>
+                                    <button class="button button-green">Подробнее</button>
+                                </div>
+                                <div class="portfolio__slide">
+                                    <div class="portfolio__slide-box">
+                                        <img src="src/img/pf_img1.jpg" alt="">
+                                        <div class="slide__box">
+                                            <div class="slide__tags">
+                                                <span class="slide__tag">#лофт</span>
+                                                <span class="slide__tag">#3комнаты</span>
+                                            </div>
+                                            <span class="slide__city">
+                                                г. Москва
+                                            </span>
+                                            <span class="slide__name h3">
+                                                2х комнатная квартира, 65 кв.м
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <span class="portfolio__slide-desc">
+                                        Lorem Ipsum has been the industry's standard dummy text ever since the  1500s, when an unknown printer took a galley of type and scrambled it to     make a type specimen book. It has survived not only five centuries, but     also the leap into electronic...
+                                    </span>
+                                    <button class="button button-green">Подробнее</button>
+                                </div>
+                                <div class="portfolio__slide">
+                                    <div class="portfolio__slide-box">
+                                        <img src="src/img/pf_img1.jpg" alt="">
+                                        <div class="slide__box">
+                                            <div class="slide__tags">
+                                                <span class="slide__tag">#лофт</span>
+                                                <span class="slide__tag">#3комнаты</span>
+                                            </div>
+                                            <span class="slide__city">
+                                                г. Москва
+                                            </span>
+                                            <span class="slide__name h3">
+                                                2х комнатная квартира, 65 кв.м
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <span class="portfolio__slide-desc">
+                                        Lorem Ipsum has been the industry's standard dummy text ever since the  1500s, when an unknown printer took a galley of type and scrambled it to     make a type specimen book. It has survived not only five centuries, but     also the leap into electronic...
+                                    </span>
+                                    <button class="button button-green">Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane tabulation__pane fade" id="portfolio-list-5" role="tabpanel" aria-labelledby="portfolio-list-5-list">
+                        <div class="pane__content">
+                           <div class="portfolio__slider slider pf_slider5">
+                                <div class="portfolio__slide">
+                                    <div class="portfolio__slide-box">
+                                        <img src="src/img/pf_img1.jpg" alt="">
+                                        <div class="slide__box">
+                                            <div class="slide__tags">
+                                                <span class="slide__tag">#лофт</span>
+                                                <span class="slide__tag">#3комнаты</span>
+                                            </div>
+                                            <span class="slide__city">
+                                                г. Москва
+                                            </span>
+                                            <span class="slide__name h3">
+                                                2х комнатная квартира, 65 кв.м
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <span class="portfolio__slide-desc">
+                                        Lorem Ipsum has been the industry's standard dummy text ever since the  1500s, when an unknown printer took a galley of type and scrambled it to     make a type specimen book. It has survived not only five centuries, but     also the leap into electronic...
+                                    </span>
+                                    <button class="button button-green">Подробнее</button>
+                                </div>
+                                <div class="portfolio__slide">
+                                    <div class="portfolio__slide-box">
+                                        <img src="src/img/pf_img1.jpg" alt="">
+                                        <div class="slide__box">
+                                            <div class="slide__tags">
+                                                <span class="slide__tag">#лофт</span>
+                                                <span class="slide__tag">#3комнаты</span>
+                                            </div>
+                                            <span class="slide__city">
+                                                г. Москва
+                                            </span>
+                                            <span class="slide__name h3">
+                                                2х комнатная квартира, 65 кв.м
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <span class="portfolio__slide-desc">
+                                        Lorem Ipsum has been the industry's standard dummy text ever since the  1500s, when an unknown printer took a galley of type and scrambled it to     make a type specimen book. It has survived not only five centuries, but     also the leap into electronic...
+                                    </span>
+                                    <button class="button button-green">Подробнее</button>
+                                </div>
+                                <div class="portfolio__slide">
+                                    <div class="portfolio__slide-box">
+                                        <img src="src/img/pf_img1.jpg" alt="">
+                                        <div class="slide__box">
+                                            <div class="slide__tags">
+                                                <span class="slide__tag">#лофт</span>
+                                                <span class="slide__tag">#3комнаты</span>
+                                            </div>
+                                            <span class="slide__city">
+                                                г. Москва
+                                            </span>
+                                            <span class="slide__name h3">
+                                                2х комнатная квартира, 65 кв.м
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <span class="portfolio__slide-desc">
+                                        Lorem Ipsum has been the industry's standard dummy text ever since the  1500s, when an unknown printer took a galley of type and scrambled it to     make a type specimen book. It has survived not only five centuries, but     also the leap into electronic...
+                                    </span>
+                                    <button class="button button-green">Подробнее</button>
+                                </div>
+                                <div class="portfolio__slide">
+                                    <div class="portfolio__slide-box">
+                                        <img src="src/img/pf_img1.jpg" alt="">
+                                        <div class="slide__box">
+                                            <div class="slide__tags">
+                                                <span class="slide__tag">#лофт</span>
+                                                <span class="slide__tag">#3комнаты</span>
+                                            </div>
+                                            <span class="slide__city">
+                                                г. Москва
+                                            </span>
+                                            <span class="slide__name h3">
+                                                2х комнатная квартира, 65 кв.м
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <span class="portfolio__slide-desc">
+                                        Lorem Ipsum has been the industry's standard dummy text ever since the  1500s, when an unknown printer took a galley of type and scrambled it to     make a type specimen book. It has survived not only five centuries, but     also the leap into electronic...
+                                    </span>
+                                    <button class="button button-green">Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Portfolio -->
+
+    <!-- Designer visit -->
+    <section class="container-fluid quest third">
+        <div class="container quest__wrap">
+            <h2 class="h2 quest__title">
+                Говорят, изменив окружение, меняешься сам
+            </h2>
+            <i class="splash"></i>
+            <span class="quest__subtitle">уже десятки наших клиентов наслаждаются своим интерьеров каждый день</span>
+
+            <div class="quest__woman">
+                <div class="buble">
+                    <h4 class="h4 text-center">Вы можете прямо сейчас заказать бесплатный выезд дизайнера на    объект</h4>
+                    <button class="button button-yellow quest__button" data-toggle="modal" data-target="#modal">Заказать</button>
+                    <span>Запишитесь на удобную для вас дату и время!</span>
+                </div>
+                <div class="woman__wrap">
+                    <h3 class="woman__name">Семечева Татьяна</h3>
+                    <span class="woman__prof">Ведущий дизайнер</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Designer visit -->
+
+    <!-- Reviews -->
+    <section class="container-fluid works">
+        <div class="container works__wrap">
+            <h2 class="h2">
+                Наши работы
+            </h2>
+            <i class="splash"></i>
+            <div class="works__slider">
+                <div class="works__slide">
+                    <div class="works__info">
+                        <div class="works__pers">
+                            <img src="src/img/review1.png" alt="">
+                            <button class="works__play"></button>
+                        </div>
+                        <div class="works__about">
+                            <h4 class="h4">Иванов Иван</h4>
+                            <span class="descript">Пакет документов, комплекс №1</span>
+                            <span class="works__address">Москва, жилой дом на ул. Крылова, 1; 52,6 кв.м</span>
+                        </div>
+                    </div>
+                    <div class="works__desc">
+                        <div class="works__desc-txt">
+                            <p>
+                                Необходимо было сделать перепланировку в хрущевке,в двухкомнатной квартире. Расширить санузел за счет коридора. Остановил свой выбор на компании Геометрика. Привлекла цена. Дистанционно был разработан план перепланировки, согласование провели с первого раза. Ребята постоянно были на связи + результаты работ сбрасывали по ватсапу. Сделали на совесть. Рекомендую. 
+                            </p>
+                        </div>
+                        <div class="works__desc-img">
+                            <div class="works__gallery">
+                                <div class="works__plus"></div>
+                            </div>
+                            <a href="src/img/review_img1.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="d-none">
+                                <img src="src/img/review_img1.jpg" alt="">
+                            </a>
+                            <a href="src/img/review_img1.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="d-none">
+                                <img src="src/img/review_img1.jpg" alt="">
+                            </a>
+                            <a href="src/img/review_img1.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="d-none">
+                                <img src="src/img/review_img1.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="works__slide">
+                    <div class="works__info">
+                        <div class="works__pers">
+                            <img src="src/img/review1.png" alt="">
+                            <button class="works__play"></button>
+                        </div>
+                        <div class="works__about">
+                            <h4 class="h4">Иванов Иван</h4>
+                            <span class="descript">Пакет документов, комплекс №1</span>
+                            <span class="works__address">Москва, жилой дом на ул. Крылова, 1; 52,6 кв.м</span>
+                        </div>
+                    </div>
+                    <div class="works__desc">
+                        <div class="works__desc-txt">
+                            <p>
+                                Необходимо было сделать перепланировку в хрущевке,в двухкомнатной квартире. Расширить санузел за счет коридора. Остановил свой выбор на компании Геометрика. Привлекла цена. Дистанционно был разработан план перепланировки, согласование провели с первого раза. Ребята постоянно были на связи + результаты работ сбрасывали по ватсапу. Сделали на совесть. Рекомендую. 
+                            </p>
+                        </div>
+                        <div class="works__desc-img">
+                            <div class="works__gallery">
+                                <div class="works__plus"></div>
+                            </div>
+                            <a href="src/img/review_img1.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="d-none">
+                                <img src="src/img/review_img1.jpg" alt="">
+                            </a>
+                            <a href="src/img/review_img1.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="d-none">
+                                <img src="src/img/review_img1.jpg" alt="">
+                            </a>
+                            <a href="src/img/review_img1.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="d-none">
+                                <img src="src/img/review_img1.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="works__slide">
+                    <div class="works__info">
+                        <div class="works__pers">
+                            <img src="src/img/review1.png" alt="">
+                            <button class="works__play"></button>
+                        </div>
+                        <div class="works__about">
+                            <h4 class="h4">Иванов Иван</h4>
+                            <span class="descript">Пакет документов, комплекс №1</span>
+                            <span class="works__address">Москва, жилой дом на ул. Крылова, 1; 52,6 кв.м</span>
+                        </div>
+                    </div>
+                    <div class="works__desc">
+                        <div class="works__desc-txt">
+                            <p>
+                                Необходимо было сделать перепланировку в хрущевке,в двухкомнатной квартире. Расширить санузел за счет коридора. Остановил свой выбор на компании Геометрика. Привлекла цена. Дистанционно был разработан план перепланировки, согласование провели с первого раза. Ребята постоянно были на связи + результаты работ сбрасывали по ватсапу. Сделали на совесть. Рекомендую. 
+                            </p>
+                        </div>
+                        <div class="works__desc-img">
+                            <div class="works__gallery">
+                                <div class="works__plus"></div>
+                            </div>
+                            <a href="src/img/review_img1.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="d-none">
+                                <img src="src/img/review_img1.jpg" alt="">
+                            </a>
+                            <a href="src/img/review_img1.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="d-none">
+                                <img src="src/img/review_img1.jpg" alt="">
+                            </a>
+                            <a href="src/img/review_img1.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="d-none">
+                                <img src="src/img/review_img1.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="works__slide">
+                    <div class="works__info">
+                        <div class="works__pers">
+                            <img src="src/img/review1.png" alt="">
+                            <button class="works__play"></button>
+                        </div>
+                        <div class="works__about">
+                            <h4 class="h4">Иванов Иван</h4>
+                            <span class="descript">Пакет документов, комплекс №1</span>
+                            <span class="works__address">Москва, жилой дом на ул. Крылова, 1; 52,6 кв.м</span>
+                        </div>
+                    </div>
+                    <div class="works__desc">
+                        <div class="works__desc-txt">
+                            <p>
+                                Необходимо было сделать перепланировку в хрущевке,в двухкомнатной квартире. Расширить санузел за счет коридора. Остановил свой выбор на компании Геометрика. Привлекла цена. Дистанционно был разработан план перепланировки, согласование провели с первого раза. Ребята постоянно были на связи + результаты работ сбрасывали по ватсапу. Сделали на совесть. Рекомендую. 
+                            </p>
+                        </div>
+                        <div class="works__desc-img">
+                            <div class="works__gallery">
+                                <div class="works__plus"></div>
+                            </div>
+                            <a href="src/img/review_img1.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="d-none">
+                                <img src="src/img/review_img1.jpg" alt="">
+                            </a>
+                            <a href="src/img/review_img1.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="d-none">
+                                <img src="src/img/review_img1.jpg" alt="">
+                            </a>
+                            <a href="src/img/review_img1.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="d-none">
+                                <img src="src/img/review_img1.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Reviews -->
+
+    <!-- FAQ -->
+    <section class="container-fluid faq">
+        <div class="container faq__wrap">
+            <h2 class="h2">
+                Часто задаваемые вопросы
+            </h2>
+            <i class="splash"></i>
+            <div class="tabulation flex-row-reverse">
+                <div class="col-4 pt-4">
+                  <div class="list-group tabulation__tabs" id="list-faq" role="tablist">
+                      <a class="tabulation__tab h4 active" id="faq-list-1-list" data-toggle="list" href="#faq-list-1" role="tab"
+                      aria-controls="advantage1">Зачем согласовывать перепланировку?</a>
+                      <a class="tabulation__tab h4" id="faq-list-2-list" data-toggle="list" href="#faq-list-2" role="tab" aria-controls="advantage2">Могу ли я объединить лоджию с кухней?</a>
+                      <a class="tabulation__tab h4" id="faq-list-3-list" data-toggle="list" href="#faq-list-3" role="tab" aria-controls="advantage3">Могу ли я самостоятельно согласовать перепланировку?</a>
+                      <a class="tabulation__tab h4" id="faq-list-4-list" data-toggle="list" href="#faq-list-4" role="tab" aria-controls="advantage4">Долго ли согласовываать перепланировку?</a>
+                      <a class="tabulation__tab h4" id="faq-list-5-list" data-toggle="list" href="#faq-list-5" role="tab" aria-controls="advantage5">Можно ли объединить кухню с комнатой?</a>
+                  </div>
+                </div>
+                <div class="col-8 pl-0">
+                  <div class="tab-content tabulation__content" id="nav-faqContent">
+                      <div class="tab-pane tabulation__pane fade show active" id="faq-list-1" role="tabpanel" aria-labelledby="faq-list-1-list">
+                        <div class="pane__content">
+                            <h3 class="h3">Зачем согласовывать перепланировку?</h3>
+                            <p>
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic...
+                            </p>
+                            <p>
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic...
+                            </p>
+                            <img class="pane__img" src="src/img/measuring_tape.svg" alt="">
+                        </div>
+                      </div>
+                      <div class="tab-pane tabulation__pane fade" id="faq-list-2" role="tabpanel" aria-labelledby="faq-list-2-list">
+                        <div class="pane__content">
+                            <h3 class="h3">Зачем согласовывать перепланировку?</h3>
+                            <p>
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic...
+                            </p>
+                            <p>
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic...
+                            </p>
+                            <img class="pane__img" src="src/img/measuring_tape.svg" alt="">
+                        </div>
+                      </div>
+                      <div class="tab-pane tabulation__pane fade" id="faq-list-3" role="tabpanel" aria-labelledby="faq-list-3-list">
+                        <div class="pane__content">
+                            <h3 class="h3">Зачем согласовывать перепланировку?</h3>
+                            <p>
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic...
+                            </p>
+                            <p>
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic...
+                            </p>
+                            <img class="pane__img" src="src/img/measuring_tape.svg" alt="">
+                        </div>
+                      </div>
+                      <div class="tab-pane tabulation__pane fade" id="faq-list-4" role="tabpanel" aria-labelledby="faq-list-4-list">
+                        <div class="pane__content">
+                            <h3 class="h3">Зачем согласовывать перепланировку?</h3>
+                            <p>
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic...
+                            </p>
+                            <p>
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic...
+                            </p>
+                            <img class="pane__img" src="src/img/measuring_tape.svg" alt="">
+                        </div>
+                      </div>
+                      <div class="tab-pane tabulation__pane fade" id="faq-list-5" role="tabpanel" aria-labelledby="faq-list-5-list">
+                        <div class="pane__content">
+                            <h3 class="h3">Зачем согласовывать перепланировку?</h3>
+                            <p>
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic...
+                            </p>
+                            <p>
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic...
+                            </p>
+                            <img class="pane__img" src="src/img/measuring_tape.svg" alt="">
+                        </div>
+                      </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /FAQ -->
+
+    <!-- Location -->
+    <section class="map" id="contacts">
+        <div class="map__label">
+            <h2 class="h2">
+                Контакты
+            </h2>
+            <i class="splash"></i>
+            <div class="map__conacts">
+                <div class="map__address">
+                    г. Пушкино, ул. Набережная, д. 2А
+                </div>
+                <div class="map__phone">
+                    <a href="#" class="h3">8 (495) 180-48-49</a>
+                    <span class="descript">Пн. – Пт.: с 9:00 до 20:00</span>
+                </div>
+                <div class="map__mail">
+                    <span>info@geo-metrika.ru</span>
+                </div>
+            </div>
+            <img src="src/img/arrow_map.svg" alt="" class="map__arrow">
+        </div>
+        <iframe src="https://www.google.com/maps/d/embed?mid=1D2JXS8SjuGMpJewB8_3Y3cRKPzc1HXLZ" width="100%" height="700"></iframe>
+    </section>
+    <!-- /Location -->
 </main>
-<footer class="footer">
 
+<!-- Footer -->
+<footer class="footer container-fluid">
+    <div class="footer__info">
+        <a href="#" class="footer__logo">
+            <img src="src/img/logo.svg">
+        </a>
+        <span class="footer__subtitle descript">
+            Разработка и согласование перепланировок квартир, коттеджей, коммерчесской недвижимости
+        </span>
+        <div class="footer__copyright">
+            <span>2019 Геометрика</span>
+            <span>Все права защищены</span>
+        </div>
+    </div>
+    <div class="footer__nav">
+        
+    </div>
+    <div class="footer__contacts">
+        <button class="button footer__button"  data-toggle="modal" data-target="#modal">Заказать звонок</button>
+        <div class="footer__social">
+            <a href="#">
+                <img src="src/img/soc_vk.svg" alt="">
+            </a>
+            <a href="#">
+                <img src="src/img/soc_wa.svg" alt="">
+            </a>
+            <a href="#">
+                <img src="src/img/soc_inst.svg" alt="">
+            </a>
+        </div>
+        <span class="footer__production">
+            Разработка сайта – <a href="http://b2b1.ru">рекламное агентство Единица</a>
+        </span>
+    </div>
 </footer>
+<!-- /Footer -->
+
+<!-- Modal -->
+<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
+            <h3 class="h3 modal-title">Для заказа оставьте свои контактные данные</h3>
+            <form action="" class="modal-form">
+                <input type="name" class="modal-input" placeholder="Имя">
+                <input type="phone" class="modal-input" placeholder="Телефон">
+                <input type="mail" class="modal-input" placeholder="Email">
+                <button type="submit" class="modal-button">Оставить заявку</button>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- /Modal -->
+
+<!-- ThxModal -->
+<div class="modal fade" id="modalThx" tabindex="-1" role="dialog" aria-labelledby="modalThxLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
+            <h3 class="h3 modal-title">Заявка успешна отправлена!</h3>
+        </div>
+    </div>
+</div>
+<!-- /ThxModal -->
+
 </body>
 <script src="src/scripts/jquery-3.4.1.min.js"></script>
 <script src="src/app/bootstrap/bootstrap.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
-         var $fScreenHeight = $('.fscreen').outerHeight();
-         $('.fscreen').find('.container').outerHeight($fScreenHeight);
+        var $fScreenHeight = $('.fscreen').outerHeight();
+        $('.fscreen').find('.container').outerHeight($fScreenHeight);
+
+        var numerlic = function(i) {
+            if (i<10) {
+                ++i;
+                var number = '0'+i;
+            }else{
+                var number = ++i;
+            }
+            $(this).text(number);
+        };
+
+        $('#list-stages .num').each(numerlic);
+        $('#nav-stagesContent .num').each(numerlic);
+
+       
+        $(function(){
+            $(window).scroll(function() {
+                if($(this).scrollTop() >= 290) {
+                    $('.header').addClass('stickytop');
+                }else{
+                    $('.header').removeClass('stickytop');
+                };
+            });
+        });
+    });
+</script>
+<script type="text/javascript" src="src/app/slick/slick.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.pf_slider1').slick({
+            infinite: true,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            autoWidth: true,
+            prevArrow: '<button type="button" class="slick-prev slider__prev"></button>',
+            nextArrow: '<button type="button" class="slick-next slider__next"></button>',
+        });
+        var pf_tab = $('.portfolio .tabulation__tab');
+        pf_tab.click(function() {
+            var pf_tab_pane = $(this).attr('href');
+            if (!$(pf_tab_pane).find('.slick-initialized').length > 0) {
+                setTimeout(function() {
+                    $(pf_tab_pane).find('.slider').slick({
+                        infinite: true,
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        autoWidth: true,
+                        prevArrow: '<button type="button" class="slick-prev slider__prev"></button>',
+                        nextArrow: '<button type="button" class="slick-next slider__next"></button>',
+                    });
+                }, 200);
+            };
+            
+        });
+        $('.works__slider').slick({
+            infinite: true,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            autoWidth: true,
+            prevArrow: '<button type="button" class="slick-prev slider__prev"></button>',
+            nextArrow: '<button type="button" class="slick-next slider__next"></button>',
+        });
+    });
+</script>
+<script src="src/app/lightbox/ekko-lightbox.min.js"></script>
+<script>
+   $('.works__desc-img').click(function (e) {
+        $(this).find('a:first-of-type').ekkoLightbox();
+        $('.ekko-lightbox-nav-overlay').find('a:first-of-type').html('<img src="src/img/prev_lg.svg">');
+        $('.ekko-lightbox-nav-overlay').find('a:last-of-type').html('<img src="src/img/next_lg.svg">');
     });
 </script>
 <script src="src/scripts/scripts.js"></script>

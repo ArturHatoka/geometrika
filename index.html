@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="src/app/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="src/css/style.min.css">
     <link rel="stylesheet" type="text/css" href="src/css/media.min.css">
+    <link rel="stylesheet" type="text/css" href="src/css/media.css">
 </head>
 <body>
 
@@ -23,8 +24,12 @@
         <nav class="header__nav navbar-expand-xl">
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="nav__list">
+                    <div class="nav__contacts">
+                        <a href="#" class="h4">8 (495) 180-48-49</a>
+                        <a href="#" class="descript">info@geo-metrika.ru</a>
+                    </div>
                     <li class="nav__point">
-                        <a href="#about" class="nav__link active">Наши услуги</a>
+                        <a href="#about" class="nav__link">Наши услуги</a>
                     </li>
                     <li class="nav__point">
                         <a href="#tarifs" class="nav__link">Тарифы</a>
@@ -41,6 +46,7 @@
                 </ul>
             </div>
         </nav>
+
         <div class="header__workTime">
             <span class="descript">
                 Пн. – Пт.:  <br> с 9:00 до 20:00
@@ -57,7 +63,6 @@
             <span>Обратный звонок</span>
         </button>
         <button class="nav__button" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
         </button>
     </section>
 </header>
@@ -67,24 +72,24 @@
     <!-- First screen -->
     <section class="container-fluid fscreen">
         <div class="container">
-            <div class="col-7 px-0 d-flex flex-column justify-content-between">
+            <div class="col-12 col-sm-7 px-0 d-flex flex-column justify-content-between">
                <h1 class="h1 fscreen__title">
                    Разработаем индивидуальный дизайн-проект «под ключ» за 1,5 месяца 
                </h1>
                <div class="test fscreen__offer">
                     <span class="fscreen__offer-subtitle subtitle">от <b>690</b> рублей/кв.м</span>
-                    <button class="fscreen__offer-button button button-yellow">Заказать</button>
+                    <button class="fscreen__offer-button button button-yellow" data-toggle="modal" data-target="#modal">Заказать</button>
                     <span class="fscreen__offer-desc descript">Нажимая данную кнопку вы соглашаетесь <a href="#">с политикой конфиденциальности</a></span>
                </div>
             </div>
-            <div class="col-5 d-flex align-items-center justify-content-end">
+            <div class="col-12 col-sm-5 d-flex align-items-center justify-content-sm-end play__wrap">
                <div class="fscreen__play">
                     <div class="play__box">
-                        <button class="play__item" data-toggle="modal" data-target="#modal">
+                        <a class="play__item video" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" data-toggle="lightbox">
                             <img src="src/img/play.svg" alt="">
-                        </button>
+                        </a>
                     </div>
-                   <span class="h3 text-white text-center">Дизайн проект барбершопа за 690 000 рублей</span>
+                   <span class="h3 text-white text-sm-center mb-0 mb-sm-2">Дизайн проект барбершопа за 690 000 рублей</span>
                </div>
             </div>
         </div>
@@ -92,7 +97,7 @@
     <!-- /First screen -->
 
     <!-- Quiz -->
-    <section class="container-fluid quest">
+    <section class="container-fluid quest first">
         <div class="container quest__wrap">
             <h2 class="h2 quest__title">
                 Ответь на 10 простых вопросов и узнай стоимость дизйн-проекта
@@ -100,6 +105,9 @@
             <i class="splash"></i>
             <span class="h4 quest__subtitle">в конце приятный бонус</span>
             <button class="button button-yellow quest__button">Пройти тест</button>
+        </div>
+        <div class="quest__bg">
+            <img src="src/img/sofa_bg.png" alt="">
         </div>
     </section>
     <!-- /Quiz -->
@@ -124,7 +132,7 @@
                 </div>
                 <div class="col-8">
                   <div class="tab-content tabulation__content" id="nav-advantageContent">
-                      <div class="tab-pane tabulation__pane fade show active" id="advantage-list-1" role="tabpanel" aria-labelledby="advantage-list-1-list">
+                      <div class="tab-pane tabulation__pane active" id="advantage-list-1" role="tabpanel" aria-labelledby="advantage-list-1-list">
                         <div class="pane__content">
                             <h3 class="h3">Гарантия результата</h3>
                             <span>
@@ -133,7 +141,7 @@
                             <img class="pane__img" src="src/img/safe.svg" alt="">
                         </div>
                       </div>
-                      <div class="tab-pane tabulation__pane fade" id="advantage-list-2" role="tabpanel" aria-labelledby="advantage-list-2-list">
+                      <div class="tab-pane tabulation__pane" id="advantage-list-2" role="tabpanel" aria-labelledby="advantage-list-2-list">
                         <div class="pane__content">
                             <h3 class="h3">Гарантия результата</h3>
                             <span>
@@ -142,7 +150,7 @@
                             <img class="pane__img" src="src/img/speed.svg" alt="">
                         </div>
                       </div>
-                      <div class="tab-pane tabulation__pane fade" id="advantage-list-3" role="tabpanel" aria-labelledby="advantage-list-3-list">
+                      <div class="tab-pane tabulation__pane" id="advantage-list-3" role="tabpanel" aria-labelledby="advantage-list-3-list">
                         <div class="pane__content">
                             <h3 class="h3">Гарантия результата</h3>
                             <span>
@@ -151,7 +159,7 @@
                             <img class="pane__img" src="src/img/portfolio.svg" alt="">
                         </div>
                       </div>
-                      <div class="tab-pane tabulation__pane fade" id="advantage-list-4" role="tabpanel" aria-labelledby="advantage-list-4-list">
+                      <div class="tab-pane tabulation__pane" id="advantage-list-4" role="tabpanel" aria-labelledby="advantage-list-4-list">
                         <div class="pane__content">
                             <h3 class="h3">Гарантия результата</h3>
                             <span>
@@ -160,7 +168,7 @@
                             <img class="pane__img" src="src/img/coin.svg" alt="">
                         </div>
                       </div>
-                      <div class="tab-pane tabulation__pane fade" id="advantage-list-5" role="tabpanel" aria-labelledby="advantage-list-5-list">
+                      <div class="tab-pane tabulation__pane" id="advantage-list-5" role="tabpanel" aria-labelledby="advantage-list-5-list">
                         <div class="pane__content">
                             <h3 class="h3">Гарантия результата</h3>
                             <span>
@@ -170,6 +178,94 @@
                         </div>
                       </div>
                   </div>
+                </div>
+            </div>
+            <div class="accordion" id="advantageAccordion">
+                <div class="card">
+                <div class="accordion__header" id="advantageOne">
+                  <h5 class="mb-0">
+                    <button class="accordion__btn" type="button" data-toggle="collapse" data-target="#collapseAdvantageOne" aria-expanded="true" aria-controls="collapseAdvantageOne">
+                      Гарантия результата
+                    </button>
+                  </h5>
+                </div>
+
+                <div id="collapseAdvantageOne" class="collapse show" aria-labelledby="advantageOne" data-parent="#advantageAccordion">
+                  <div class="card-body">
+                    <span>
+                        Возвращаем всю сумму предоплаты в случае осогласовании перепланировки. Гарантию фиксируем договором.
+                    </span>
+                    <img class="card-img absol" src="src/img/safe.svg" alt="">
+                  </div>
+                </div>
+                </div>
+                <div class="card">
+                <div class="accordion__header" id="advantageTwo">
+                  <h5 class="mb-0">
+                    <button class="accordion__btn collapsed" type="button" data-toggle="collapse" data-target="#collapseAdvantageTwo" aria-expanded="false" aria-controls="collapseAdvantageTwo">
+                      Быстро
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseAdvantageTwo" class="collapse" aria-labelledby="advantageTwo" data-parent="#advantageAccordion">
+                  <div class="card-body">
+                    <span>
+                        Возвращаем всю сумму предоплаты в случае осогласовании перепланировки. Гарантию фиксируем договором.
+                    </span>
+                    <img class="card-img absol" src="src/img/speed.svg" alt="">
+                  </div>
+                </div>
+                </div>
+                <div class="card">
+                <div class="accordion__header" id="advantageThree">
+                  <h5 class="mb-0">
+                    <button class="accordion__btn collapsed" type="button" data-toggle="collapse" data-target="#collapseAdvantageThree" aria-expanded="false" aria-controls="collapseAdvantageThree">
+                      Экономично
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseAdvantageThree" class="collapse" aria-labelledby="advantageThree" data-parent="#advantageAccordion">
+                  <div class="card-body">
+                    <span>
+                        Возвращаем всю сумму предоплаты в случае осогласовании перепланировки. Гарантию фиксируем договором.
+                    </span>
+                    <img class="card-img absol" src="src/img/portfolio.svg" alt="">
+                  </div>
+                </div>
+                </div>
+                <div class="card">
+                <div class="accordion__header" id="advantageFour">
+                  <h5 class="mb-0">
+                    <button class="accordion__btn collapsed" type="button" data-toggle="collapse" data-target="#collapseAdvantageFour" aria-expanded="false" aria-controls="collapseAdvantageFour">
+                        Комплексно
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseAdvantageFour" class="collapse" aria-labelledby="advantageFour" data-parent="#advantageAccordion">
+                  <div class="card-body">
+                    <span>
+                        Возвращаем всю сумму предоплаты в случае осогласовании перепланировки. Гарантию фиксируем договором.
+                    </span>
+                    <img class="card-img absol" src="src/img/coin.svg" alt="">
+                  </div>
+                </div>
+                </div>
+                <div class="card">
+                <div class="accordion__header" id="advantageFive">
+                  <h5 class="mb-0">
+                    <button class="accordion__btn collapsed" type="button" data-toggle="collapse" data-target="#collapseAdvantageFive" aria-expanded="false" aria-controls="collapseAdvantageFive">
+                        Удобно и без нервов
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseAdvantageFive" class="collapse" aria-labelledby="advantageFive" data-parent="#advantageAccordion">
+                  <div class="card-body">
+                    <span>
+                        Возвращаем всю сумму предоплаты в случае осогласовании перепланировки. Гарантию фиксируем договором.
+                    </span>
+                    <img class="card-img absol" src="src/img/island.svg" alt="">
+                  </div>
+                </div>
                 </div>
             </div>
         </div>
@@ -184,7 +280,7 @@
             </h2>
             <i class="splash"></i>
             <div class="tabulation flex-row-reverse">
-                <div class="col-4 pt-4">
+                <div class="col-5 col-lg-4 pt-4">
                   <div class="list-group tabulation__tabs" id="list-stages" role="tablist">
                       <a class="tabulation__tab h3 active" id="stages-list-1-list" data-toggle="list" href="#stages-list-1" role="tab"
                       aria-controls="advantage1"><span class="num"></span>Составление договора</a>
@@ -194,11 +290,11 @@
                       <a class="tabulation__tab h3" id="stages-list-5-list" data-toggle="list" href="#stages-list-5" role="tab" aria-controls="advantage5"><span class="num"></span>Выезд на объект</a>
                   </div>
                 </div>
-                <div class="col-8">
+                <div class="col-7 col-lg-8">
                   <div class="tab-content tabulation__content" id="nav-stagesContent">
-                        <div class="tab-pane tabulation__pane fade show active" id="stages-list-1" role="tabpanel" aria-labelledby="stages-list-1-list">
+                        <div class="tab-pane tabulation__pane active" id="stages-list-1" role="tabpanel" aria-labelledby="stages-list-1-list">
                             <div class="pane__content">
-                                <h3 class="h3"><span class="num"></span>Составление договора</h3>
+                                <h3 class="h3 d-flex"><span class="num"></span><span>Составление договора</span></h3>
                                 <div class="text">
                                     <p>
                                         Возвращаем всю сумму предоплаты в случае отказа в       согласовании перепланировки. <br> Гарантию    фиксируем    договором.
@@ -207,9 +303,9 @@
                                 <img class="pane__img" src="src/img/stages_img.jpg" alt="">
                             </div>
                         </div>
-                        <div class="tab-pane tabulation__pane fade" id="stages-list-2" role=" tabpanel" aria-labelledby="stages-list-2-list">
+                        <div class="tab-pane tabulation__pane" id="stages-list-2" role=" tabpanel" aria-labelledby="stages-list-2-list">
                             <div class="pane__content">
-                                <h3 class="h3"><span class="num"></span>Эскизное прототипирование</h3>
+                                <h3 class="h3 d-flex"><span class="num"></span><span>Эскизное прототипирование</span></h3>
                                 <div class="text">
                                     <p>
                                         Возвращаем всю сумму предоплаты в случае отказа в       согласовании перепланировки. <br> Гарантию    фиксируем    договором.
@@ -218,9 +314,9 @@
                                 <img class="pane__img" src="src/img/stages_img.jpg" alt="">
                             </div>
                         </div>
-                        <div class="tab-pane tabulation__pane fade" id="stages-list-3" role="tabpanel" aria-labelledby="stages-list-3-list">
+                        <div class="tab-pane tabulation__pane" id="stages-list-3" role="tabpanel" aria-labelledby="stages-list-3-list">
                             <div class="pane__content">
-                                <h3 class="h3"><span class="num"></span>Прототипирование</h3>
+                                <h3 class="h3 d-flex"><span class="num"></span><span>Прототипирование</span></h3>
                                 <div class="text">
                                     <p>
                                         Возвращаем всю сумму предоплаты в случае отказа в       согласовании перепланировки. <br> Гарантию    фиксируем    договором.
@@ -229,9 +325,9 @@
                                 <img class="pane__img" src="src/img/stages_img.jpg" alt="">
                             </div>
                         </div>
-                        <div class="tab-pane tabulation__pane fade" id="stages-list-4" role="tabpanel" aria-labelledby="stages-list-4-list">
+                        <div class="tab-pane tabulation__pane" id="stages-list-4" role="tabpanel" aria-labelledby="stages-list-4-list">
                             <div class="pane__content">
-                                <h3 class="h3"><span class="num"></span>Согласование</h3>
+                                <h3 class="h3 d-flex"><span class="num"></span><span>Согласование</span></h3>
                                 <div class="text">
                                     <p>
                                         Возвращаем всю сумму предоплаты в случае отказа в       согласовании перепланировки. <br> Гарантию    фиксируем    договором.
@@ -240,9 +336,9 @@
                                 <img class="pane__img" src="src/img/stages_img.jpg" alt="">
                             </div>
                         </div>
-                        <div class="tab-pane tabulation__pane fade" id="stages-list-5" role="tabpanel" aria-labelledby="stages-list-5-list">   
+                        <div class="tab-pane tabulation__pane" id="stages-list-5" role="tabpanel" aria-labelledby="stages-list-5-list">   
                             <div class="pane__content">
-                                <h3 class="h3"><span class="num"></span>Выезд на объект</h3>
+                                <h3 class="h3 d-flex"><span class="num"></span>Выезд на объект</h3>
                                 <div class="text">
                                     <p>
                                         Возвращаем всю сумму предоплаты в случае отказа в       согласовании перепланировки. <br> Гарантию    фиксируем    договором.
@@ -252,6 +348,118 @@
                             </div>
                         </div>
                   </div>
+                </div>
+            </div>
+            <div class="accordion" id="stagesAccordion">
+                <div class="card">
+                    <div class="accordion__header" id="stagesOne">
+                      <h5 class="mb-0">
+                        <button class="accordion__btn" type="button" data-toggle="collapse"     data-target="#collapseStagesOne" aria-expanded="true" aria-controls="   collapseStagesOne">
+                            <span class="d-flex flex-column">
+                                <span class="num mb-2"></span> 
+                                <span>Составление договора</span>
+                            </span>
+                        </button>
+                      </h5>
+                    </div>
+                    <div id="collapseStagesOne" class="collapse show" aria-labelledby="stagesOne"   data-parent="#stagesAccordion">
+                      <div class="card-body">
+                        <span>
+                            Возвращаем всю сумму предоплаты в случае отказа в согласовании  перепланировки. Гарантию фиксируем договором.
+                        </span>
+                        <div class="card-img__wrap">
+                            <img class="card-img" src="src/img/stages_img.jpg" alt="">
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="accordion__header" id="stagesTwo">
+                      <h5 class="mb-0">
+                        <button class="accordion__btn collapsed" type="button" data-toggle="collapse"     data-target="#collapseStagesTwo" aria-expanded="true" aria-controls="   collapseStagesTwo">
+                            <span class="d-flex flex-column">
+                                <span class="num mb-2"></span> 
+                                <span>Эскизное прототипирование</span>
+                            </span>
+                        </button>
+                      </h5>
+                    </div>
+                    <div id="collapseStagesTwo" class="collapse" aria-labelledby="stagesTwo"    data-parent="#stagesAccordion">
+                      <div class="card-body">
+                        <span>
+                            Возвращаем всю сумму предоплаты в случае отказа в согласовании  перепланировки. Гарантию фиксируем договором.
+                        </span>
+                        <div class="card-img__wrap">
+                            <img class="card-img" src="src/img/stages_img.jpg" alt="">
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="accordion__header" id="stagesThree">
+                      <h5 class="mb-0">
+                        <button class="accordion__btn collapsed" type="button" data-toggle="collapse"     data-target="#collapseStagesThree" aria-expanded="true" aria-controls="collapseStagesThree">
+                            <span class="d-flex flex-column">
+                                <span class="num mb-2"></span> 
+                                <span>Прототипирование</span>
+                            </span>
+                        </button>
+                      </h5>
+                    </div>
+                    <div id="collapseStagesThree" class="collapse" aria-labelledby="stagesThree" data-parent="#stagesAccordion">
+                      <div class="card-body">
+                        <span>
+                            Возвращаем всю сумму предоплаты в случае отказа в согласовании  перепланировки. Гарантию фиксируем договором.
+                        </span>
+                        <div class="card-img__wrap">
+                            <img class="card-img" src="src/img/stages_img.jpg" alt="">
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="accordion__header" id="stagesFour">
+                      <h5 class="mb-0">
+                        <button class="accordion__btn collapsed" type="button" data-toggle="collapse"     data-target="#collapseStagesFour" aria-expanded="true" aria-controls="collapseStagesFour">
+                            <span class="d-flex flex-column">
+                                <span class="num mb-2"></span> 
+                                <span>Согласование</span>
+                            </span>
+                        </button>
+                      </h5>
+                    </div>
+                    <div id="collapseStagesFour" class="collapse" aria-labelledby="stagesFour"   data-parent="#stagesAccordion">
+                      <div class="card-body">
+                        <span>
+                            Возвращаем всю сумму предоплаты в случае отказа в согласовании  перепланировки. Гарантию фиксируем договором.
+                        </span>
+                        <div class="card-img__wrap">
+                            <img class="card-img" src="src/img/stages_img.jpg" alt="">
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="accordion__header" id="stagesFive">
+                      <h5 class="mb-0">
+                        <button class="accordion__btn collapsed" type="button" data-toggle="collapse"     data-target="#collapseStagesFive" aria-expanded="true" aria-controls="  collapseStagesFive">
+                            <span class="d-flex flex-column">
+                                <span class="num mb-2"></span> 
+                                <span>Выезд на объект</span>
+                            </span>
+                        </button>
+                      </h5>
+                    </div>
+                    <div id="collapseStagesFive" class="collapse" aria-labelledby="stagesFive"  data-parent="#stagesAccordion">
+                      <div class="card-body">
+                        <span>
+                            Возвращаем всю сумму предоплаты в случае отказа в согласовании  перепланировки. Гарантию фиксируем договором.
+                        </span>
+                        <div class="card-img__wrap">
+                            <img class="card-img" src="src/img/stages_img.jpg" alt="">
+                        </div>
+                      </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -270,26 +478,26 @@
             </span>
             <div class="about__play">
                 <div class="play__box">
-                    <button class="play__item">
+                    <a class="play__item video" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" data-toggle="lightbox">
                         <img src="src/img/play.svg" alt="">
-                    </button>
+                    </a>
                 </div>
                 <span class="h3 text-white text-center">Посмотреть <br> видео-репортаж</span>
             </div>
             <div class="about__statistic">
                 <div class="statistic__box">
                     <span class="h4">На рынке</span>
-                    <img src="src/img/3,5.svg" alt="" class="statistic__item">
+                    <span class="statistic__num">3,5</span>
                     <span class="h4">года</span>
                 </div>
                 <div class="statistic__box">
                     <span class="h4">Реализовано</span>
-                    <img src="src/img/75.svg" alt="" class="statistic__item">
+                    <span class="statistic__num">75</span>
                     <span class="h4">проектов</span>
                 </div>
                 <div class="statistic__box">
                     <span class="h4">Спроектировано</span>
-                    <img src="src/img/5785.svg" alt="" class="statistic__item">
+                    <span class="statistic__num">5 785</span>
                     <span class="h4">кв.м</span>
                 </div>
             </div>
@@ -373,7 +581,7 @@
                         Отдельно оплачивается гос. Пошлина 3 000 рублей
                     </span>
                 </div>
-                <div class="packs__table-row packs__table-end">
+                <div class="packs__table-row packs__table-end packs__table-sale">
                     <span class="packs__table-col h4">
                         <i>Cкидка 10 %</i> при полной предоплате 
                     </span>
@@ -476,6 +684,9 @@
             <span class="h4 quest__subtitle">Оставьте свои контактные данные и получите ссылку на скачивания документа!</span>
             <a href="" class="button button-yellow quest__button">Скачать pdf</a>
         </div>
+        <div class="quest__bg">
+            <img src="src/img/project_bg.png" alt="">
+        </div>
     </section>
     <!-- /Download portfolio pdf -->
 
@@ -510,7 +721,7 @@
             </h2>
             <i class="splash"></i>
             <div class="tabulation">
-                <div class="col-2 pr-0">
+                <div class="col-12 col-sm-3 col-xl-3 pr-0 tabulation__scroll">
                   <div class="list-group tabulation__tabs" id="list-portfolio" role="tablist">
                       <a class="tabulation__tab h3 active" id="portfolio-list-1-list" data-toggle="list" href="#portfolio-list-1" role="tab"
                       aria-controls="portfolio1">Все работы</a>
@@ -520,7 +731,7 @@
                       <a class="tabulation__tab h3" id="portfolio-list-5-list" data-toggle="list" href="#portfolio-list-5" role="tab" aria-controls="portfolio5">Эклектика</a>
                   </div>
                 </div>
-                <div class="col-10 pl-4">
+                <div class="col-12 col-sm-9 col-xl-9 pl-4 tabulation__wrapper">
                   <div class="tab-content tabulation__content" id="nav-portfolioContent">
                       <div class="tab-pane tabulation__pane fade show active" id="portfolio-list-1" role="tabpanel" aria-labelledby="portfolio-list-1-list">
                         <div class="pane__content">
@@ -544,7 +755,7 @@
                                     <span class="portfolio__slide-desc">
                                         Lorem Ipsum has been the industry's standard dummy text ever since the  1500s, when an unknown printer took a galley of type and scrambled it to     make a type specimen book. It has survived not only five centuries, but     also the leap into electronic...
                                     </span>
-                                    <button class="button button-green">Подробнее</button>
+                                    <button class="button button-green" data-toggle="modal" data-target="#pfModal">Подробнее</button>
                                 </div>
                                 <div class="portfolio__slide">
                                     <div class="portfolio__slide-box">
@@ -565,7 +776,7 @@
                                     <span class="portfolio__slide-desc">
                                         Lorem Ipsum has been the industry's standard dummy text ever since the  1500s, when an unknown printer took a galley of type and scrambled it to     make a type specimen book. It has survived not only five centuries, but     also the leap into electronic...
                                     </span>
-                                    <button class="button button-green">Подробнее</button>
+                                    <button class="button button-green" data-toggle="modal" data-target="#pfModal">Подробнее</button>
                                 </div>
                                 <div class="portfolio__slide">
                                     <div class="portfolio__slide-box">
@@ -586,7 +797,7 @@
                                     <span class="portfolio__slide-desc">
                                         Lorem Ipsum has been the industry's standard dummy text ever since the  1500s, when an unknown printer took a galley of type and scrambled it to     make a type specimen book. It has survived not only five centuries, but     also the leap into electronic...
                                     </span>
-                                    <button class="button button-green">Подробнее</button>
+                                    <button class="button button-green" data-toggle="modal" data-target="#pfModal">Подробнее</button>
                                 </div>
                                 <div class="portfolio__slide">
                                     <div class="portfolio__slide-box">
@@ -607,7 +818,7 @@
                                     <span class="portfolio__slide-desc">
                                         Lorem Ipsum has been the industry's standard dummy text ever since the  1500s, when an unknown printer took a galley of type and scrambled it to     make a type specimen book. It has survived not only five centuries, but     also the leap into electronic...
                                     </span>
-                                    <button class="button button-green">Подробнее</button>
+                                    <button class="button button-green" data-toggle="modal" data-target="#pfModal">Подробнее</button>
                                 </div>
                             </div>
                         </div>
@@ -634,7 +845,7 @@
                                     <span class="portfolio__slide-desc">
                                         Lorem Ipsum has been the industry's standard dummy text ever since the  1500s, when an unknown printer took a galley of type and scrambled it to     make a type specimen book. It has survived not only five centuries, but     also the leap into electronic...
                                     </span>
-                                    <button class="button button-green">Подробнее</button>
+                                    <button class="button button-green" data-toggle="modal" data-target="#pfModal">Подробнее</button>
                                 </div>
                                 <div class="portfolio__slide">
                                     <div class="portfolio__slide-box">
@@ -655,7 +866,7 @@
                                     <span class="portfolio__slide-desc">
                                         Lorem Ipsum has been the industry's standard dummy text ever since the  1500s, when an unknown printer took a galley of type and scrambled it to     make a type specimen book. It has survived not only five centuries, but     also the leap into electronic...
                                     </span>
-                                    <button class="button button-green">Подробнее</button>
+                                    <button class="button button-green" data-toggle="modal" data-target="#pfModal">Подробнее</button>
                                 </div>
                                 <div class="portfolio__slide">
                                     <div class="portfolio__slide-box">
@@ -676,7 +887,7 @@
                                     <span class="portfolio__slide-desc">
                                         Lorem Ipsum has been the industry's standard dummy text ever since the  1500s, when an unknown printer took a galley of type and scrambled it to     make a type specimen book. It has survived not only five centuries, but     also the leap into electronic...
                                     </span>
-                                    <button class="button button-green">Подробнее</button>
+                                    <button class="button button-green" data-toggle="modal" data-target="#pfModal">Подробнее</button>
                                 </div>
                                 <div class="portfolio__slide">
                                     <div class="portfolio__slide-box">
@@ -697,7 +908,7 @@
                                     <span class="portfolio__slide-desc">
                                         Lorem Ipsum has been the industry's standard dummy text ever since the  1500s, when an unknown printer took a galley of type and scrambled it to     make a type specimen book. It has survived not only five centuries, but     also the leap into electronic...
                                     </span>
-                                    <button class="button button-green">Подробнее</button>
+                                    <button class="button button-green" data-toggle="modal" data-target="#pfModal">Подробнее</button>
                                 </div>
                             </div>
                         </div>
@@ -724,7 +935,7 @@
                                     <span class="portfolio__slide-desc">
                                         Lorem Ipsum has been the industry's standard dummy text ever since the  1500s, when an unknown printer took a galley of type and scrambled it to     make a type specimen book. It has survived not only five centuries, but     also the leap into electronic...
                                     </span>
-                                    <button class="button button-green">Подробнее</button>
+                                    <button class="button button-green" data-toggle="modal" data-target="#pfModal">Подробнее</button>
                                 </div>
                                 <div class="portfolio__slide">
                                     <div class="portfolio__slide-box">
@@ -745,7 +956,7 @@
                                     <span class="portfolio__slide-desc">
                                         Lorem Ipsum has been the industry's standard dummy text ever since the  1500s, when an unknown printer took a galley of type and scrambled it to     make a type specimen book. It has survived not only five centuries, but     also the leap into electronic...
                                     </span>
-                                    <button class="button button-green">Подробнее</button>
+                                    <button class="button button-green" data-toggle="modal" data-target="#pfModal">Подробнее</button>
                                 </div>
                                 <div class="portfolio__slide">
                                     <div class="portfolio__slide-box">
@@ -766,7 +977,7 @@
                                     <span class="portfolio__slide-desc">
                                         Lorem Ipsum has been the industry's standard dummy text ever since the  1500s, when an unknown printer took a galley of type and scrambled it to     make a type specimen book. It has survived not only five centuries, but     also the leap into electronic...
                                     </span>
-                                    <button class="button button-green">Подробнее</button>
+                                    <button class="button button-green" data-toggle="modal" data-target="#pfModal">Подробнее</button>
                                 </div>
                                 <div class="portfolio__slide">
                                     <div class="portfolio__slide-box">
@@ -787,7 +998,7 @@
                                     <span class="portfolio__slide-desc">
                                         Lorem Ipsum has been the industry's standard dummy text ever since the  1500s, when an unknown printer took a galley of type and scrambled it to     make a type specimen book. It has survived not only five centuries, but     also the leap into electronic...
                                     </span>
-                                    <button class="button button-green">Подробнее</button>
+                                    <button class="button button-green" data-toggle="modal" data-target="#pfModal">Подробнее</button>
                                 </div>
                             </div>
                         </div>
@@ -814,7 +1025,7 @@
                                     <span class="portfolio__slide-desc">
                                         Lorem Ipsum has been the industry's standard dummy text ever since the  1500s, when an unknown printer took a galley of type and scrambled it to     make a type specimen book. It has survived not only five centuries, but     also the leap into electronic...
                                     </span>
-                                    <button class="button button-green">Подробнее</button>
+                                    <button class="button button-green" data-toggle="modal" data-target="#pfModal">Подробнее</button>
                                 </div>
                                 <div class="portfolio__slide">
                                     <div class="portfolio__slide-box">
@@ -835,7 +1046,7 @@
                                     <span class="portfolio__slide-desc">
                                         Lorem Ipsum has been the industry's standard dummy text ever since the  1500s, when an unknown printer took a galley of type and scrambled it to     make a type specimen book. It has survived not only five centuries, but     also the leap into electronic...
                                     </span>
-                                    <button class="button button-green">Подробнее</button>
+                                    <button class="button button-green" data-toggle="modal" data-target="#pfModal">Подробнее</button>
                                 </div>
                                 <div class="portfolio__slide">
                                     <div class="portfolio__slide-box">
@@ -856,7 +1067,7 @@
                                     <span class="portfolio__slide-desc">
                                         Lorem Ipsum has been the industry's standard dummy text ever since the  1500s, when an unknown printer took a galley of type and scrambled it to     make a type specimen book. It has survived not only five centuries, but     also the leap into electronic...
                                     </span>
-                                    <button class="button button-green">Подробнее</button>
+                                    <button class="button button-green" data-toggle="modal" data-target="#pfModal">Подробнее</button>
                                 </div>
                                 <div class="portfolio__slide">
                                     <div class="portfolio__slide-box">
@@ -877,7 +1088,7 @@
                                     <span class="portfolio__slide-desc">
                                         Lorem Ipsum has been the industry's standard dummy text ever since the  1500s, when an unknown printer took a galley of type and scrambled it to     make a type specimen book. It has survived not only five centuries, but     also the leap into electronic...
                                     </span>
-                                    <button class="button button-green">Подробнее</button>
+                                    <button class="button button-green" data-toggle="modal" data-target="#pfModal">Подробнее</button>
                                 </div>
                             </div>
                         </div>
@@ -904,7 +1115,7 @@
                                     <span class="portfolio__slide-desc">
                                         Lorem Ipsum has been the industry's standard dummy text ever since the  1500s, when an unknown printer took a galley of type and scrambled it to     make a type specimen book. It has survived not only five centuries, but     also the leap into electronic...
                                     </span>
-                                    <button class="button button-green">Подробнее</button>
+                                    <button class="button button-green" data-toggle="modal" data-target="#pfModal">Подробнее</button>
                                 </div>
                                 <div class="portfolio__slide">
                                     <div class="portfolio__slide-box">
@@ -925,7 +1136,7 @@
                                     <span class="portfolio__slide-desc">
                                         Lorem Ipsum has been the industry's standard dummy text ever since the  1500s, when an unknown printer took a galley of type and scrambled it to     make a type specimen book. It has survived not only five centuries, but     also the leap into electronic...
                                     </span>
-                                    <button class="button button-green">Подробнее</button>
+                                    <button class="button button-green" data-toggle="modal" data-target="#pfModal">Подробнее</button>
                                 </div>
                                 <div class="portfolio__slide">
                                     <div class="portfolio__slide-box">
@@ -946,7 +1157,7 @@
                                     <span class="portfolio__slide-desc">
                                         Lorem Ipsum has been the industry's standard dummy text ever since the  1500s, when an unknown printer took a galley of type and scrambled it to     make a type specimen book. It has survived not only five centuries, but     also the leap into electronic...
                                     </span>
-                                    <button class="button button-green">Подробнее</button>
+                                    <button class="button button-green" data-toggle="modal" data-target="#pfModal">Подробнее</button>
                                 </div>
                                 <div class="portfolio__slide">
                                     <div class="portfolio__slide-box">
@@ -967,7 +1178,7 @@
                                     <span class="portfolio__slide-desc">
                                         Lorem Ipsum has been the industry's standard dummy text ever since the  1500s, when an unknown printer took a galley of type and scrambled it to     make a type specimen book. It has survived not only five centuries, but     also the leap into electronic...
                                     </span>
-                                    <button class="button button-green">Подробнее</button>
+                                    <button class="button button-green" data-toggle="modal" data-target="#pfModal">Подробнее</button>
                                 </div>
                             </div>
                         </div>
@@ -1172,7 +1383,7 @@
                 </div>
                 <div class="col-8 pl-0">
                   <div class="tab-content tabulation__content" id="nav-faqContent">
-                      <div class="tab-pane tabulation__pane fade show active" id="faq-list-1" role="tabpanel" aria-labelledby="faq-list-1-list">
+                      <div class="tab-pane tabulation__pane active" id="faq-list-1" role="tabpanel" aria-labelledby="faq-list-1-list">
                         <div class="pane__content">
                             <h3 class="h3">Зачем согласовывать перепланировку?</h3>
                             <p>
@@ -1184,7 +1395,7 @@
                             <img class="pane__img" src="src/img/measuring_tape.svg" alt="">
                         </div>
                       </div>
-                      <div class="tab-pane tabulation__pane fade" id="faq-list-2" role="tabpanel" aria-labelledby="faq-list-2-list">
+                      <div class="tab-pane tabulation__pane" id="faq-list-2" role="tabpanel" aria-labelledby="faq-list-2-list">
                         <div class="pane__content">
                             <h3 class="h3">Зачем согласовывать перепланировку?</h3>
                             <p>
@@ -1196,7 +1407,7 @@
                             <img class="pane__img" src="src/img/measuring_tape.svg" alt="">
                         </div>
                       </div>
-                      <div class="tab-pane tabulation__pane fade" id="faq-list-3" role="tabpanel" aria-labelledby="faq-list-3-list">
+                      <div class="tab-pane tabulation__pane" id="faq-list-3" role="tabpanel" aria-labelledby="faq-list-3-list">
                         <div class="pane__content">
                             <h3 class="h3">Зачем согласовывать перепланировку?</h3>
                             <p>
@@ -1208,7 +1419,7 @@
                             <img class="pane__img" src="src/img/measuring_tape.svg" alt="">
                         </div>
                       </div>
-                      <div class="tab-pane tabulation__pane fade" id="faq-list-4" role="tabpanel" aria-labelledby="faq-list-4-list">
+                      <div class="tab-pane tabulation__pane" id="faq-list-4" role="tabpanel" aria-labelledby="faq-list-4-list">
                         <div class="pane__content">
                             <h3 class="h3">Зачем согласовывать перепланировку?</h3>
                             <p>
@@ -1220,7 +1431,7 @@
                             <img class="pane__img" src="src/img/measuring_tape.svg" alt="">
                         </div>
                       </div>
-                      <div class="tab-pane tabulation__pane fade" id="faq-list-5" role="tabpanel" aria-labelledby="faq-list-5-list">
+                      <div class="tab-pane tabulation__pane" id="faq-list-5" role="tabpanel" aria-labelledby="faq-list-5-list">
                         <div class="pane__content">
                             <h3 class="h3">Зачем согласовывать перепланировку?</h3>
                             <p>
@@ -1233,6 +1444,113 @@
                         </div>
                       </div>
                   </div>
+                </div>
+            </div>
+            <div class="accordion" id="faqAccordion">
+                <div class="card">
+                <div class="accordion__header" id="faqOne">
+                  <h5 class="mb-0">
+                    <button class="accordion__btn" type="button" data-toggle="collapse" data-target="#collapseFaqOne" aria-expanded="true" aria-controls="collapseFaqOne">
+                      Зачем согласовывать перепланировку?
+                    </button>
+                  </h5>
+                </div>
+
+                <div id="collapseFaqOne" class="collapse show" aria-labelledby="faqOne" data-parent="#faqAccordion">
+                  <div class="card-body">
+                    <p>
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic...
+                    </p>
+                    <p>
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic...
+                    </p>
+                    <img class="card-img absol" src="src/img/measuring_tape.svg" alt="">
+                  </div>
+                </div>
+                </div>
+                <div class="card">
+                <div class="accordion__header" id="faqTwo">
+                  <h5 class="mb-0">
+                    <button class="accordion__btn collapsed" type="button" data-toggle="collapse" data-target="#collapseFaqTwo" aria-expanded="true" aria-controls="collapseFaqTwo">
+                      Могу ли я объединить лоджию с кухней?
+                    </button>
+                  </h5>
+                </div>
+
+                <div id="collapseFaqTwo" class="collapse" aria-labelledby="faqTwo" data-parent="#faqAccordion">
+                  <div class="card-body">
+                    <p>
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic...
+                    </p>
+                    <p>
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic...
+                    </p>
+                    <img class="card-img absol" src="src/img/measuring_tape.svg" alt="">
+                  </div>
+                </div>
+                </div>
+                <div class="card">
+                <div class="accordion__header" id="faqThree">
+                  <h5 class="mb-0">
+                    <button class="accordion__btn collapsed" type="button" data-toggle="collapse" data-target="#collapseFaqThree" aria-expanded="true" aria-controls="collapseFaqThree">
+                     Могу ли я самостоятельно согласовать перепланировку?
+                    </button>
+                  </h5>
+                </div>
+
+                <div id="collapseFaqThree" class="collapse" aria-labelledby="faqThree" data-parent="#faqAccordion">
+                  <div class="card-body">
+                    <p>
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic...
+                    </p>
+                    <p>
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic...
+                    </p>
+                    <img class="card-img absol" src="src/img/measuring_tape.svg" alt="">
+                  </div>
+                </div>
+                </div>
+                <div class="card">
+                <div class="accordion__header" id="faqFour">
+                  <h5 class="mb-0">
+                    <button class="accordion__btn collapsed" type="button" data-toggle="collapse" data-target="#collapseFaqFour" aria-expanded="true" aria-controls="collapseFaqgeFour">
+                     Долго ли согласовываать перепланировку?
+                    </button>
+                  </h5>
+                </div>
+
+                <div id="collapseFaqFour" class="collapse" aria-labelledby="faqFour" data-parent="#faqAccordion">
+                  <div class="card-body">
+                   <p>
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic...
+                    </p>
+                    <p>
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic...
+                    </p>
+                    <img class="card-img absol" src="src/img/measuring_tape.svg" alt="">
+                  </div>
+                </div>
+                </div>
+                <div class="card">
+                <div class="accordion__header" id="faqFive">
+                  <h5 class="mb-0">
+                    <button class="accordion__btn collapsed" type="button" data-toggle="collapse" data-target="#collapseFaqFive" aria-expanded="true" aria-controls="collapseFaqgeFive">
+                     Можно ли объединить кухню с комнатой?
+                    </button>
+                  </h5>
+                </div>
+
+                <div id="collapseFaqFive" class="collapse" aria-labelledby="faqFive" data-parent="#faqAccordion">
+                  <div class="card-body">
+                    <p>
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic...
+                    </p>
+                    <p>
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic...
+                    </p>
+                    <img class="card-img absol" src="src/img/measuring_tape.svg" alt="">
+                  </div>
+                </div>
                 </div>
             </div>
         </div>
@@ -1260,14 +1578,15 @@
             </div>
             <img src="src/img/arrow_map.svg" alt="" class="map__arrow">
         </div>
-        <iframe src="https://www.google.com/maps/d/embed?mid=1D2JXS8SjuGMpJewB8_3Y3cRKPzc1HXLZ" width="100%" height="700"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1115.1535691283912!2d37.86215796859284!3d56.01335330765694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b52ed5c542da0d%3A0xec302c81f5b155b8!2sUlitsa%20Naberezhnaya%2C%202%2C%20Pushkino%2C%20Moskovskaya%20oblast&#39;%2C%20141202!5e0!3m2!1sen!2sru!4v1574086268083!5m2!1sen!2sru" width="100%" height="700" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
     </section>
     <!-- /Location -->
 </main>
 
 <!-- Footer -->
 <footer class="footer container-fluid">
-    <div class="footer__info">
+  <div class="container footer__wrapper">
+    <div class="footer__info col-4">
         <a href="#" class="footer__logo">
             <img src="src/img/logo.svg">
         </a>
@@ -1279,10 +1598,26 @@
             <span>Все права защищены</span>
         </div>
     </div>
-    <div class="footer__nav">
-        
+    <div class="footer__nav col-3 col-lg-4">
+        <ul class="nav__list">
+            <li class="nav__point">
+                <a href="#about" class="nav__link">Наши услуги</a>
+            </li>
+            <li class="nav__point">
+                <a href="#tarifs" class="nav__link">Тарифы</a>
+            </li>
+            <li class="nav__point">
+                <a href="#test" class="nav__link">Тест</a>
+            </li>
+            <li class="nav__point">
+                <a href="#portfolio" class="nav__link">Портфолио</a>
+            </li>
+            <li class="nav__point">
+                <a href="#contacts" class="nav__link">Контакты</a>
+            </li>
+        </ul>
     </div>
-    <div class="footer__contacts">
+    <div class="footer__contacts px-lg-3 px-0 col-4">
         <button class="button footer__button"  data-toggle="modal" data-target="#modal">Заказать звонок</button>
         <div class="footer__social">
             <a href="#">
@@ -1299,6 +1634,7 @@
             Разработка сайта – <a href="http://b2b1.ru">рекламное агентство Единица</a>
         </span>
     </div>
+  </div>
 </footer>
 <!-- /Footer -->
 
@@ -1319,6 +1655,51 @@
 </div>
 <!-- /Modal -->
 
+<!-- Portfolio Modal -->
+<div class="modal fade" id="pfModal" tabindex="-1" role="dialog" aria-labelledby="pfModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered pfModal">
+        <div class="modal-content">
+            <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
+            <h3 class="h3 modal-title">Заголовок</h3>
+            <p class="modal-subtitle">
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic...
+            </p>
+            <div class="modal-box">
+                <div class="col-8 pl-0">
+                    <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic...</p>
+                    <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic...</p>
+                    <br>
+                    <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic...</p>
+                </div>
+                <div class="col-4 pr-0">
+                    <a class="modal-video video" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" data-toggle="lightbox">
+                        <img src="src/img/pf_img1.jpg" alt="">
+                        <div class="modal-video-box">
+                            <div class="modal-video-wrap">
+                                <div class="modal-video-play">
+                                    <img src="src/img/play.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="modal-docs">
+                <a href="src/img/review_img1.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="modal-doc">
+                    <img src="src/img/review_img1.jpg" alt="">
+                </a>
+                <a href="src/img/review_img1.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="modal-doc">
+                    <img src="src/img/review_img1.jpg" alt="">
+                </a>
+                <a href="src/img/review_img1.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="modal-doc">
+                    <img src="src/img/review_img1.jpg" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Portfolio Modal -->
+
 <!-- ThxModal -->
 <div class="modal fade" id="modalThx" tabindex="-1" role="dialog" aria-labelledby="modalThxLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -1335,8 +1716,8 @@
 <script src="src/app/bootstrap/bootstrap.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
-        var $fScreenHeight = $('.fscreen').outerHeight();
-        $('.fscreen').find('.container').outerHeight($fScreenHeight);
+        // var $fScreenHeight = $('.fscreen').outerHeight();
+        // $('.fscreen').find('.container').outerHeight($fScreenHeight);
 
         var numerlic = function(i) {
             if (i<10) {
@@ -1350,6 +1731,7 @@
 
         $('#list-stages .num').each(numerlic);
         $('#nav-stagesContent .num').each(numerlic);
+        $('#stagesAccordion .num').each(numerlic);
 
        
         $(function(){
@@ -1360,7 +1742,40 @@
                     $('.header').removeClass('stickytop');
                 };
             });
+
+            var sections = $('section'),
+                nav = $('nav'), 
+                nav_height = nav.outerHeight();
+
+            $(window).on('scroll', function () {
+            var cur_pos = $(this).scrollTop();
+  
+            sections.each(function() {
+                var top = $(this).offset().top - nav_height,
+                bottom = top + $(this).outerHeight();
+    
+                if (cur_pos >= top && cur_pos <= bottom) {
+                    nav.find('a').removeClass('active');
+                    sections.removeClass('active');
+      
+                $(this).addClass('active');
+                nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
+                }
+              });
+            });
+
+nav.find('a').on('click', function () {
+  var $el = $(this)
+    , id = $el.attr('href');
+  
+  $('html, body').animate({
+    scrollTop: $(id).offset().top - nav_height
+  }, 500);
+  
+  return false;
+});
         });
+
     });
 </script>
 <script type="text/javascript" src="src/app/slick/slick.min.js"></script>
@@ -1373,6 +1788,14 @@
             autoWidth: true,
             prevArrow: '<button type="button" class="slick-prev slider__prev"></button>',
             nextArrow: '<button type="button" class="slick-next slider__next"></button>',
+            responsive: [
+                {
+                  breakpoint: 768,
+                  settings: {
+                    slidesToShow: 1,
+                  }
+                }
+            ]
         });
         var pf_tab = $('.portfolio .tabulation__tab');
         pf_tab.click(function() {
@@ -1386,6 +1809,14 @@
                         autoWidth: true,
                         prevArrow: '<button type="button" class="slick-prev slider__prev"></button>',
                         nextArrow: '<button type="button" class="slick-next slider__next"></button>',
+                        responsive: [
+                            {
+                              breakpoint: 768,
+                              settings: {
+                                slidesToShow: 1,
+                              }
+                            }
+                        ]
                     });
                 }, 200);
             };
@@ -1398,6 +1829,14 @@
             autoWidth: true,
             prevArrow: '<button type="button" class="slick-prev slider__prev"></button>',
             nextArrow: '<button type="button" class="slick-next slider__next"></button>',
+            responsive: [
+                {
+                  breakpoint: 1200,
+                  settings: {
+                    slidesToShow: 1,
+                  }
+                }
+            ]
         });
     });
 </script>
@@ -1405,6 +1844,16 @@
 <script>
    $('.works__desc-img').click(function (e) {
         $(this).find('a:first-of-type').ekkoLightbox();
+        $('.ekko-lightbox-nav-overlay').find('a:first-of-type').html('<img src="src/img/prev_lg.svg">');
+        $('.ekko-lightbox-nav-overlay').find('a:last-of-type').html('<img src="src/img/next_lg.svg">');
+    });
+   // $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+   //              event.preventDefault();
+   //              $(this).ekkoLightbox();
+   //          });
+    $('.modal-doc, .video').click(function (e) { 
+        event.preventDefault();
+        $(this).ekkoLightbox();
         $('.ekko-lightbox-nav-overlay').find('a:first-of-type').html('<img src="src/img/prev_lg.svg">');
         $('.ekko-lightbox-nav-overlay').find('a:last-of-type').html('<img src="src/img/next_lg.svg">');
     });

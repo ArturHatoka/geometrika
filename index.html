@@ -8,10 +8,10 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="src/app/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="src/app/lightbox/ekko-lightbox.css">
+    <link rel="stylesheet" type="text/css" href="src/app/tiny/tiny-slider.css">
     <link rel="stylesheet" type="text/css" href="src/app/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="src/css/style.min.css">
     <link rel="stylesheet" type="text/css" href="src/css/media.min.css">
-    <link rel="stylesheet" type="text/css" href="src/css/media.css">
 </head>
 <body>
 
@@ -121,18 +121,17 @@
             <i class="splash"></i>
             <div class="tabulation">
                 <div class="col-4">
-                  <div class="list-group tabulation__tabs" id="list-advantage" role="tablist">
-                      <a class="tabulation__tab h3 active" id="advantage-list-1-list" data-toggle="list" href="#advantage-list-1" role="tab"
-                      aria-controls="advantage1">Гарантия результата</a>
-                      <a class="tabulation__tab h3" id="advantage-list-2-list" data-toggle="list" href="#advantage-list-2" role="tab" aria-controls="advantage2">Быстро</a>
-                      <a class="tabulation__tab h3" id="advantage-list-3-list" data-toggle="list" href="#advantage-list-3" role="tab" aria-controls="advantage3">Экономично</a>
-                      <a class="tabulation__tab h3" id="advantage-list-4-list" data-toggle="list" href="#advantage-list-4" role="tab" aria-controls="advantage4">Комплексно</a>
-                      <a class="tabulation__tab h3" id="advantage-list-5-list" data-toggle="list" href="#advantage-list-5" role="tab" aria-controls="advantage5">Удобно и без нервов</a>
-                  </div>
+                  <ul class="list-group tabulation__tabs" id="list-advantage">
+                      <li class="tabulation__tab h3 tns-nav-active" data-nav="0" aria-label="Carousel Page 1" aria-controls="list-advantage" tabindex="-1">Гарантия результата</li>
+                      <li class="tabulation__tab h3" data-nav="1" aria-label="Carousel Page 2" aria-controls="list-advantage" tabindex="-1">Быстро</li>
+                      <li class="tabulation__tab h3" data-nav="2" aria-label="Carousel Page 3" aria-controls="list-advantage" tabindex="-1">Экономично</li>
+                      <li class="tabulation__tab h3" data-nav="3" aria-label="Carousel Page 4" aria-controls="list-advantage" tabindex="-1">Комплексно</li>
+                      <li class="tabulation__tab h3" data-nav="4" aria-label="Carousel Page 5" aria-controls="list-advantage" tabindex="-1">Удобно и без нервов</li>
+                  </ul>
                 </div>
                 <div class="col-8">
-                  <div class="tab-content tabulation__content" id="nav-advantageContent">
-                      <div class="tab-pane tabulation__pane active" id="advantage-list-1" role="tabpanel" aria-labelledby="advantage-list-1-list">
+                  <div class="tab-content tabulation__content" id="slider-advantage">
+                      <div class="tab-pane tabulation__pane">
                         <div class="pane__content">
                             <h3 class="h3">Гарантия результата</h3>
                             <span>
@@ -141,7 +140,7 @@
                             <img class="pane__img" src="src/img/safe.svg" alt="">
                         </div>
                       </div>
-                      <div class="tab-pane tabulation__pane" id="advantage-list-2" role="tabpanel" aria-labelledby="advantage-list-2-list">
+                      <div class="tab-pane tabulation__pane">
                         <div class="pane__content">
                             <h3 class="h3">Гарантия результата</h3>
                             <span>
@@ -150,7 +149,7 @@
                             <img class="pane__img" src="src/img/speed.svg" alt="">
                         </div>
                       </div>
-                      <div class="tab-pane tabulation__pane" id="advantage-list-3" role="tabpanel" aria-labelledby="advantage-list-3-list">
+                      <div class="tab-pane tabulation__pane">
                         <div class="pane__content">
                             <h3 class="h3">Гарантия результата</h3>
                             <span>
@@ -159,7 +158,7 @@
                             <img class="pane__img" src="src/img/portfolio.svg" alt="">
                         </div>
                       </div>
-                      <div class="tab-pane tabulation__pane" id="advantage-list-4" role="tabpanel" aria-labelledby="advantage-list-4-list">
+                      <div class="tab-pane tabulation__pane">
                         <div class="pane__content">
                             <h3 class="h3">Гарантия результата</h3>
                             <span>
@@ -168,7 +167,7 @@
                             <img class="pane__img" src="src/img/coin.svg" alt="">
                         </div>
                       </div>
-                      <div class="tab-pane tabulation__pane" id="advantage-list-5" role="tabpanel" aria-labelledby="advantage-list-5-list">
+                      <div class="tab-pane tabulation__pane">
                         <div class="pane__content">
                             <h3 class="h3">Гарантия результата</h3>
                             <span>
@@ -281,17 +280,16 @@
             <i class="splash"></i>
             <div class="tabulation flex-row-reverse">
                 <div class="col-5 col-lg-4 pt-4">
-                  <div class="list-group tabulation__tabs" id="list-stages" role="tablist">
-                      <a class="tabulation__tab h3 active" id="stages-list-1-list" data-toggle="list" href="#stages-list-1" role="tab"
-                      aria-controls="advantage1"><span class="num"></span>Составление договора</a>
-                      <a class="tabulation__tab h3" id="stages-list-2-list" data-toggle="list" href="#stages-list-2" role="tab" aria-controls="advantage2"><span class="num"></span>Эскизное прототипирование</a>
-                      <a class="tabulation__tab h3" id="stages-list-3-list" data-toggle="list" href="#stages-list-3" role="tab" aria-controls="advantage3"><span class="num"></span>Прототипирование</a>
-                      <a class="tabulation__tab h3" id="stages-list-4-list" data-toggle="list" href="#stages-list-4" role="tab" aria-controls="advantage4"><span class="num"></span>Согласование</a>
-                      <a class="tabulation__tab h3" id="stages-list-5-list" data-toggle="list" href="#stages-list-5" role="tab" aria-controls="advantage5"><span class="num"></span>Выезд на объект</a>
-                  </div>
+                  <ul class="list-group tabulation__tabs" id="list-stages">
+                      <li class="tabulation__tab h3 tns-nav-active" data-nav="0" aria-label="Carousel Page 1" aria-controls="list-stages" tabindex="-1"><span class="num"></span>Составление договора</li>
+                      <li class="tabulation__tab h3" data-nav="1" aria-label="Carousel Page 2" aria-controls="list-stages" tabindex="-1"><span class="num"></span>Эскизное прототипирование</li>
+                      <li class="tabulation__tab h3" data-nav="2" aria-label="Carousel Page 3" aria-controls="list-stages" tabindex="-1"><span class="num"></span>Прототипирование</li>
+                      <li class="tabulation__tab h3" data-nav="3" aria-label="Carousel Page 4" aria-controls="list-stages" tabindex="-1"><span class="num"></span>Согласование</li>
+                      <li class="tabulation__tab h3" data-nav="4" aria-label="Carousel Page 5" aria-controls="list-stages" tabindex="-1"><span class="num"></span>Выезд на объект</li>
+                  </ul>
                 </div>
                 <div class="col-7 col-lg-8">
-                  <div class="tab-content tabulation__content" id="nav-stagesContent">
+                  <div class="tab-content tabulation__content" id="slider-stages">
                         <div class="tab-pane tabulation__pane active" id="stages-list-1" role="tabpanel" aria-labelledby="stages-list-1-list">
                             <div class="pane__content">
                                 <h3 class="h3 d-flex"><span class="num"></span><span>Составление договора</span></h3>
@@ -722,18 +720,17 @@
             <i class="splash"></i>
             <div class="tabulation">
                 <div class="col-12 col-sm-3 col-xl-3 pr-0 tabulation__scroll">
-                  <div class="list-group tabulation__tabs" id="list-portfolio" role="tablist">
-                      <a class="tabulation__tab h3 active" id="portfolio-list-1-list" data-toggle="list" href="#portfolio-list-1" role="tab"
-                      aria-controls="portfolio1">Все работы</a>
-                      <a class="tabulation__tab h3" id="portfolio-list-2-list" data-toggle="list" href="#portfolio-list-2" role="tab" aria-controls="portfolio2">Лофт</a>
-                      <a class="tabulation__tab h3" id="portfolio-list-3-list" data-toggle="list" href="#portfolio-list-3" role="tab" aria-controls="portfolio3">Сканди</a>
-                      <a class="tabulation__tab h3" id="portfolio-list-4-list" data-toggle="list" href="#portfolio-list-4" role="tab" aria-controls="portfolio4">Классика</a>
-                      <a class="tabulation__tab h3" id="portfolio-list-5-list" data-toggle="list" href="#portfolio-list-5" role="tab" aria-controls="portfolio5">Эклектика</a>
-                  </div>
+                  <ul class="list-group tabulation__tabs" id="list-portfolio">
+                      <li class="tabulation__tab h3 tns-nav-active" data-nav="0" aria-label="Carousel Page 1" aria-controls="list-stages" tabindex="-1" data-slider="portfolio-list-1">Все работы</li>
+                      <li class="tabulation__tab h3" data-nav="1" aria-label="Carousel Page 2" aria-controls="list-stages" tabindex="-1" data-slider="portfolio-list-2">Лофт</li>
+                      <li class="tabulation__tab h3" data-nav="2" aria-label="Carousel Page 3" aria-controls="list-stages" tabindex="-1" data-slider="portfolio-list-3">Сканди</li>
+                      <li class="tabulation__tab h3" data-nav="3" aria-label="Carousel Page 4" aria-controls="list-stages" tabindex="-1" data-slider="portfolio-list-4">Классика</li>
+                      <li class="tabulation__tab h3" data-nav="4" aria-label="Carousel Page 5" aria-controls="list-stages" tabindex="-1" data-slider="portfolio-list-5">Эклектика</li>
+                  </ul>
                 </div>
                 <div class="col-12 col-sm-9 col-xl-9 pl-4 tabulation__wrapper">
-                  <div class="tab-content tabulation__content" id="nav-portfolioContent">
-                      <div class="tab-pane tabulation__pane fade show active" id="portfolio-list-1" role="tabpanel" aria-labelledby="portfolio-list-1-list">
+                  <div class="tab-content tabulation__content" id="slider-portfolio">
+                      <div class="tab-pane tabulation__pane" id="portfolio-list-1" role="tabpanel" aria-labelledby="portfolio-list-1-list">
                         <div class="pane__content">
                             <div class="portfolio__slider slider pf_slider1">
                                 <div class="portfolio__slide">
@@ -823,7 +820,7 @@
                             </div>
                         </div>
                       </div>
-                      <div class="tab-pane tabulation__pane fade" id="portfolio-list-2" role="tabpanel" aria-labelledby="portfolio-list-2-list">
+                      <div class="tab-pane tabulation__pane" id="portfolio-list-2" role="tabpanel" aria-labelledby="portfolio-list-2-list">
                         <div class="pane__content">
                             <div class="portfolio__slider slider pf_slider2">
                                 <div class="portfolio__slide">
@@ -913,7 +910,7 @@
                             </div>
                         </div>
                       </div>
-                      <div class="tab-pane tabulation__pane fade" id="portfolio-list-3" role="tabpanel" aria-labelledby="portfolio-list-3-list">
+                      <div class="tab-pane tabulation__pane" id="portfolio-list-3" role="tabpanel" aria-labelledby="portfolio-list-3-list">
                         <div class="pane__content">
                            <div class="portfolio__slider slider pf_slider3">
                                 <div class="portfolio__slide">
@@ -1003,7 +1000,7 @@
                             </div>
                         </div>
                       </div>
-                      <div class="tab-pane tabulation__pane fade" id="portfolio-list-4" role="tabpanel" aria-labelledby="portfolio-list-4-list">
+                      <div class="tab-pane tabulation__pane" id="portfolio-list-4" role="tabpanel" aria-labelledby="portfolio-list-4-list">
                         <div class="pane__content">
                            <div class="portfolio__slider slider pf_slider4">
                                 <div class="portfolio__slide">
@@ -1093,7 +1090,7 @@
                             </div>
                         </div>
                       </div>
-                      <div class="tab-pane tabulation__pane fade" id="portfolio-list-5" role="tabpanel" aria-labelledby="portfolio-list-5-list">
+                      <div class="tab-pane tabulation__pane" id="portfolio-list-5" role="tabpanel" aria-labelledby="portfolio-list-5-list">
                         <div class="pane__content">
                            <div class="portfolio__slider slider pf_slider5">
                                 <div class="portfolio__slide">
@@ -1372,17 +1369,16 @@
             <i class="splash"></i>
             <div class="tabulation flex-row-reverse">
                 <div class="col-4 pt-4">
-                  <div class="list-group tabulation__tabs" id="list-faq" role="tablist">
-                      <a class="tabulation__tab h4 active" id="faq-list-1-list" data-toggle="list" href="#faq-list-1" role="tab"
-                      aria-controls="advantage1">Зачем согласовывать перепланировку?</a>
-                      <a class="tabulation__tab h4" id="faq-list-2-list" data-toggle="list" href="#faq-list-2" role="tab" aria-controls="advantage2">Могу ли я объединить лоджию с кухней?</a>
-                      <a class="tabulation__tab h4" id="faq-list-3-list" data-toggle="list" href="#faq-list-3" role="tab" aria-controls="advantage3">Могу ли я самостоятельно согласовать перепланировку?</a>
-                      <a class="tabulation__tab h4" id="faq-list-4-list" data-toggle="list" href="#faq-list-4" role="tab" aria-controls="advantage4">Долго ли согласовываать перепланировку?</a>
-                      <a class="tabulation__tab h4" id="faq-list-5-list" data-toggle="list" href="#faq-list-5" role="tab" aria-controls="advantage5">Можно ли объединить кухню с комнатой?</a>
-                  </div>
+                  <ul class="list-group tabulation__tabs" id="list-faq" role="tablist">
+                      <li class="tabulation__tab h4 tns-nav-active" data-nav="0" aria-label="Carousel Page 1" aria-controls="list-faq" tabindex="-1">Зачем согласовывать перепланировку?</li>
+                      <li class="tabulation__tab h4" data-nav="1" aria-label="Carousel Page 2" aria-controls="list-faq" tabindex="-1">Могу ли я объединить лоджию с кухней?</li>
+                      <li class="tabulation__tab h4" data-nav="2" aria-label="Carousel Page 3" aria-controls="list-faq" tabindex="-1">Могу ли я самостоятельно согласовать перепланировку?</li>
+                      <li class="tabulation__tab h4" data-nav="3" aria-label="Carousel Page 4" aria-controls="list-faq" tabindex="-1">Долго ли согласовываать перепланировку?</li>
+                      <li class="tabulation__tab h4" data-nav="4" aria-label="Carousel Page 5" aria-controls="list-faq" tabindex="-1">Можно ли объединить кухню с комнатой?</li>
+                  </ul>
                 </div>
                 <div class="col-8 pl-0">
-                  <div class="tab-content tabulation__content" id="nav-faqContent">
+                  <div class="tab-content tabulation__content" id="slider-faq">
                       <div class="tab-pane tabulation__pane active" id="faq-list-1" role="tabpanel" aria-labelledby="faq-list-1-list">
                         <div class="pane__content">
                             <h3 class="h3">Зачем согласовывать перепланировку?</h3>
@@ -1729,8 +1725,18 @@
             $(this).text(number);
         };
 
+        var numerlicus = function(i) {
+            if (i<10) {
+                var number = '0'+i;
+                ++i;
+            }else{
+                var number = ++i;
+            }
+            $(this).text(number);
+        };
+
         $('#list-stages .num').each(numerlic);
-        $('#nav-stagesContent .num').each(numerlic);
+        $('#slider-stages-mw .num').each(numerlicus);
         $('#stagesAccordion .num').each(numerlic);
 
        
@@ -1764,64 +1770,110 @@
               });
             });
 
-nav.find('a').on('click', function () {
-  var $el = $(this)
-    , id = $el.attr('href');
-  
-  $('html, body').animate({
-    scrollTop: $(id).offset().top - nav_height
-  }, 500);
-  
-  return false;
-});
+			nav.find('a').on('click', function () {
+			  var $el = $(this)
+			    , id = $el.attr('href');
+			  
+			  $('html, body').animate({
+			    scrollTop: $(id).offset().top - nav_height
+			  }, 500);
+			  
+			  return false;
+			});
         });
 
     });
 </script>
+<script src="src/app/tiny/tiny-slider.js"></script>
+<script type="module">
+  var slider = tns({
+    container: '#slider-advantage',
+    items: 1,
+  	axis: "vertical",
+    navContainer: "#list-advantage",
+  	swipeAngle: false,
+    autoplay: false,
+    controls: false,
+    speed: '700',
+  });
+  var slider = tns({
+    container: '#slider-stages',
+    items: 1,
+  	axis: "vertical",
+    navContainer: "#list-stages",
+  	swipeAngle: false,
+    autoplay: false,
+    controls: false,
+    speed: '700',
+  });
+  var slider = tns({
+    container: '#slider-portfolio',
+    items: 1,
+  	axis: "vertical",
+    navContainer: "#list-portfolio",
+  	swipeAngle: false,
+    autoplay: false,
+    controls: false,
+    speed: '700',
+  });
+  var slider = tns({
+    container: '#slider-faq',
+    items: 1,
+  	axis: "vertical",
+    navContainer: "#list-faq",
+  	swipeAngle: false,
+    autoplay: false,
+    controls: false,
+    speed: '700',
+  });
+</script>
 <script type="text/javascript" src="src/app/slick/slick.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
-        $('.pf_slider1').slick({
-            infinite: true,
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            autoWidth: true,
-            prevArrow: '<button type="button" class="slick-prev slider__prev"></button>',
-            nextArrow: '<button type="button" class="slick-next slider__next"></button>',
-            responsive: [
-                {
-                  breakpoint: 768,
-                  settings: {
-                    slidesToShow: 1,
-                  }
-                }
-            ]
-        });
-        var pf_tab = $('.portfolio .tabulation__tab');
-        pf_tab.click(function() {
-            var pf_tab_pane = $(this).attr('href');
-            if (!$(pf_tab_pane).find('.slick-initialized').length > 0) {
-                setTimeout(function() {
-                    $(pf_tab_pane).find('.slider').slick({
-                        infinite: true,
-                        slidesToShow: 2,
-                        slidesToScroll: 1,
-                        autoWidth: true,
-                        prevArrow: '<button type="button" class="slick-prev slider__prev"></button>',
-                        nextArrow: '<button type="button" class="slick-next slider__next"></button>',
-                        responsive: [
-                            {
-                              breakpoint: 768,
-                              settings: {
-                                slidesToShow: 1,
-                              }
-                            }
-                        ]
-                    });
-                }, 200);
-            };
+    	for (i=0; i < 6; i++) {
+        	$('.pf_slider'+[i]).slick({
+        	    infinite: true,
+        	    slidesToShow: 2,
+        	    slidesToScroll: 1,
+        	    autoWidth: true,
+        	    prevArrow: '<button type="button" class="slick-prev 	slider__prev"></button>',
+        	    nextArrow: '<button type="button" class="slick-next 	slider__next"></button>',
+        	    responsive: [
+        	        {
+        	          breakpoint: 768,
+        	          settings: {
+        	            slidesToShow: 1,
+        	          }
+        	        }
+        	    ]
+        	});
+    	}
+        // var pf_tab = $('.portfolio .tabulation__tab');
+        // pf_tab.click(function() {
+        //     var pf_tab_pane = $(this).attr('data-slider');
+        //     if (!$(pf_tab_pane).find('.slick-initialized').length > 0) {
+        //         setTimeout(function() {
+        //             $(pf_tab_pane).find('.slider').slick({
+        //     		console.log(pf_tab_pane);
+        //                 infinite: true,
+        //                 slidesToShow: 2,
+        //                 slidesToScroll: 1,
+        //                 autoWidth: true,
+        //                 prevArrow: '<button type="button" class="slick-prev slider__prev"></button>',
+        //                 nextArrow: '<button type="button" class="slick-next slider__next"></button>',
+        //                 responsive: [
+        //                     {
+        //                       breakpoint: 768,
+        //                       settings: {
+        //                         slidesToShow: 1,
+        //                       }
+        //                     }
+        //                 ]
+        //             });
+        //         }, 200);
+        //     };
             
-        });
+        // });
         $('.works__slider').slick({
             infinite: true,
             slidesToShow: 2,

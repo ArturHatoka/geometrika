@@ -771,6 +771,9 @@
 }
 
 @media screen and (max-width: 650px) {
+	.packs__wrap {
+    	padding-bottom: 150px;
+	}
 	.header__workTime{
 		display: none;
 	}
@@ -1225,9 +1228,6 @@
 	.faq{
 		margin: 90px 0 90px;
 	}
-	.packs__wrap {
-    	margin-bottom: 150px;
-	}
 	.stages {
 		margin-bottom: 90px;
 	}
@@ -1271,7 +1271,7 @@
 		margin-right: 10px;
 		color: #fff;
 		border-radius: 8px;
-		&.active {
+		&.tns-nav-active {
     		color: #A18F5F;
 		}
 	}
